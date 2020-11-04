@@ -6,9 +6,19 @@ button.btn {
   border-radius: 0px 4px 4px 0px;
 }
 
+.navbar {
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.collapse .navbar-collapse {
+  flex-direction: column;
+}
+
 img.avatar {
   border-radius: 75px;
   width: 40px;
+  display: block;
 }
 
 @media screen and(max-width: 348px) {
