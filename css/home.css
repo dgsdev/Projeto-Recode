@@ -6,9 +6,21 @@ button.btn {
   border-radius: 0px 4px 4px 0px;
 }
 
+a.nova-cor,
+button.nova-cor {
+  background-color: #8ac0ca;
+  border-color: #8ac0ca;
+}
+
 .navbar {
   flex-direction: column;
   padding-top: 30px;
+  background-color: #238b98;
+}
+
+li.nav-item.mx-auto a.nav-link,
+.active > .nav-link {
+  color: white;
 }
 
 .collapse .navbar-collapse {
@@ -17,7 +29,7 @@ button.btn {
 
 img.avatar {
   border-radius: 75px;
-  width: 40px;
+  width: 60px;
   display: block;
 }
 

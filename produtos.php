@@ -13,8 +13,8 @@
     <!-- Início do menu -->
     <div class="container-fluid">
       <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning col-lg-2
-        d-flex align-items-start">          
+        <nav class="col-lg-2 navbar navbar-expand-lg navbar-light d-flex 
+        align-items-start">          
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -75,7 +75,7 @@
                 <div class="form-group">
                   <input type="text" class="form-control" id="pesquisa" name="pesquisa">
                 </div>
-                <button type="submit" class="btn btn-primary">Pesquisa</button>
+                <button type="submit" class="btn nova-cor text-white">Pesquisa</button>
               </form>
                     <div class="row" style="text-align: center;">
                       <div class="col-lg-4 col-md-6 col-sm-6 mt-4 mb-4 d-flex justify-content-center">
@@ -84,7 +84,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
                       </div>
                     </div>
                       </div>
@@ -95,7 +95,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
                       </div>
                     </div>
                       </div>
@@ -106,7 +106,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
                       </div>
                     </div>
                       </div>
@@ -117,7 +117,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
                       </div>
                     </div>
                       </div>  
@@ -128,7 +128,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
                       </div>
                     </div>
                       </div>    
@@ -139,7 +139,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
                       </div>
                     </div>
                       </div>     
