@@ -26,7 +26,7 @@ $cidade = $_POST['cidade'];
 $estado = $_POST['estado'];
 $cep = $_POST['cep'];
 $pais = $_POST['pais'];
-
+/*
 echo '<br> Nome: '.$nome;
 echo '<br> Apelido: '.$apelido;
 echo '<br> Imagem: '.$imagem;
@@ -41,8 +41,8 @@ echo '<br> Bairro: '.$bairro;
 echo '<br> Cidade: '.$cidade;
 echo '<br> Estado: '.$estado;
 echo '<br> CEP: '.$cep;
-echo '<br> País: '.$pais;
-/*
+echo '<br> País: '.$pais; */
+
 if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $conf_senha) {
 
     $senha_cripto = md5($senha);     
@@ -56,6 +56,7 @@ if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $c
     alert('Atualizado com Sucesso!')
     window.location.href = 'index.php'
     </script>";
+    
 }
 else if ($senha != $conf_senha){
 
@@ -81,14 +82,14 @@ else if (strlen($apelido) <= 3){
     </script>";
 
 }
-else if (strlen($imagem) == 0){
+/*else if (strlen($imagem) == 0){
 
     echo "<script>
     alert('Coloque uma imagem para realizar o cadastro!')
     window.location.href = 'cadastro.php'
     </script>";
   
-}
+}*/
 else if (strlen($email) <= 3 ){
 
     echo "<script>
@@ -105,5 +106,5 @@ else if (strlen($senha) <= 3){
     </script>";
     
 }
-*/
+
 ?>
