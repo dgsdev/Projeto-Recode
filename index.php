@@ -23,35 +23,51 @@
     <div class="overlay"></div>
 
                 <!-- Começo da nav-menu -->
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-                <a class="navbar-brand text-light" href="#"><b>LOGO</b></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Inicio<span class="sr-only">(Página atual)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Cursos</a>
-                            </li>
-                    
-                    <!-- começo do dropdown -->
-                            
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Entrar</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Ação</a>
-                                <a class="dropdown-item" href="#">Outra ação</a>
-                                <a class="dropdown-item" href="#">Algo mais aqui</a>
-                            </div>
-                            </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand text-light" href="#"><b>LOGO</b></a>
+      <button class="navbar-toggler btn btn-entrar" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+        Entrar
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-nav ml-auto">                            
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-entrar" data-toggle="modal" data-target="#exampleModal">
+  Entrar
+</button>
 
-                        <!--Fim do dropdown-->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form>
+        <div class="form-group">
+         <label for="exampleInputEmail1">Email</label>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Senha</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="senha">
+        </div>
+        <div class="d-flex justify-content-around align-bottom">
+         <button type="submit" class="btn nova-cor" style="color: white;">Enviar</button>
+          <a href="cadastro.php" class="pt-2" style="color: #0b9fb3b6;">Não tem cadastro? Faça o seu aqui</a>            
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">        
+      </div>
+    </div>
+  </div>
+</div>                        
+
+ <!--Fim do dropdown-->
             </nav>
                         <!-- Fim da Nav-menu -->
 

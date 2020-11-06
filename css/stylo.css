@@ -1,0 +1,23 @@
+
+/* desabilita alguns controles dos vídeos */
+.access-button {
+    width: 80% !important;
+  }
+
+  video::-webkit-media-controls-timeline {
+    display: none;
+  }
+
+  video::-webkit-media-controls-fullscreen-button {
+    display: none;
+  }
+
+/* manipula o local e tamanho do vídeo de Libras */
+#vd2 {
+    width: 25%;
+    position: relative;
+    z-index: 1;
+    float: right;
+    margin-top: -235px;
+    margin-right: 30px;
+  } 
