@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "projetorecode";
+$database = "jump";
 
 $link = mysqli_connect($servername, $username, $password, $database);
 

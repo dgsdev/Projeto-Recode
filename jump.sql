@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 06/11/2020 às 06:26
+-- Tempo de geração: 06/11/2020 às 15:46
 -- Versão do servidor: 8.0.21
 -- Versão do PHP: 7.4.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `projetorecode`
+-- Banco de dados: `jump`
 --
 
 -- --------------------------------------------------------
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `data` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idusuarios`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Despejando dados para a tabela `usuarios`
@@ -80,7 +80,8 @@ INSERT INTO `usuarios` (`idusuarios`, `nome`, `apelido`, `imagem`, `email`, `sen
 (2, 'douglas', 'dgs', '', 'dgs@dgsdev.com', 'e10adc3949ba59abbe56e057f20f883e', '', 'Ouvinte', 'Leve', 'Masculino', '0000-00-00', 'Rua K', 'Vila Mariana', 'São Paulo', 'SP', '09582-289', 'Brasil', NULL),
 (3, 'mateus', 'mateus', '', 'mateus@dgsdev.com', 'e10adc3949ba59abbe56e057f20f883e', '', 'Surdo', 'Outro', 'Masculino', '0000-00-00', 'Rua K', 'Vila Mariana', 'São Paulo', 'SP', '09582-289', 'Brasil', '0000-00-00 00:00:00'),
 (4, 'juca', 'juca', '', 'juca@dgsdev.com', 'e10adc3949ba59abbe56e057f20f883e', '', 'Ouvinte', 'Leve', 'Masculino', '0000-00-00', 'Rua K', 'Vila Mariana', 'São Paulo', 'SP', '09582-289', 'Brasil', '2020-11-06 00:32:27'),
-(5, 'joão', 'jo', '', 'joao@dgsdev.com', 'e10adc3949ba59abbe56e057f20f883e', '', 'Ouvinte', 'Leve', 'Masculino', '0000-00-00', 'Rua K', 'Vila Mariana', 'São Paulo', 'SP', '09582-289', 'Brasil', '2020-11-06 00:36:47');
+(5, 'joão', 'jo', '', 'joao@dgsdev.com', 'e10adc3949ba59abbe56e057f20f883e', '', 'Ouvinte', 'Leve', 'Masculino', '0000-00-00', 'Rua K', 'Vila Mariana', 'São Paulo', 'SP', '09582-289', 'Brasil', '2020-11-06 00:36:47'),
+(6, 'paulo p', 'paulinho', 'https://images.pexels.com/photos/358532/pexels-photo-358532.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 'paulinho@dgsdev.com', 'e10adc3949ba59abbe56e057f20f883e', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-11-06 04:05:10');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
