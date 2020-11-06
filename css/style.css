@@ -1,53 +1,87 @@
-#nav{
-    position: fixed;
-    background-color:#0b9fb3b6 ;
-    width: 100vw;
-    height: 88px;
-  
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,800&display=swap');
+body {
+  margin: 0px;
+}
+header {
+  height: auto;
+}
+/* estilizaçao do video */
+/*
+    #background{
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+    background: rgba(0, 0, 0, 0.411 );
+    background:background cover !important ;
+   
+}
+*/
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
-}
-.navbar-brand{
-    font-family: 'Playfair Display', serif; 
-    font-size: 28px;
-    margin: 0 630px 0 0;
-  
-}
-.nav-item{
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    padding-left: 50px;
-    padding-right: 20px;
-    cursor: pointer;
-    
-}
-.video-background{
-  position: relative;
+.overlay {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
   width: 100%;
-  min-height: 100vh;
-}
-#video{
-    background: black !;
+  height: 100%;
+  padding: 20px;
 }
 
-.card{
-    background:#0b9fb3b6 ;
-    margin-top: -450px;
-    border: none;
+#content {
+  position: absolute;
+  text-align: center;
+  top: 245px;
+  padding: 30px;
+  width: 35%;
+  height: auto;
+  color: white;
+  text-shadow: #000 2px 2px 1px;
+  background: rgba(11, 158, 177, 0.714);
+  border-radius: 4px;
 }
-.card-title{
-    font-family: 'Balsamiq Sans', cursive;
-    text-align: center;
+h2 {
+  font-family: 'Playfair Display', serif;
 }
-footer{
-    position: relative;
-    width: 100vw;
-    height: 52px;
-    margin-top: 220px;
-    text-align: center;
-    background:#0b9fb3b6 ;
-    
+nav {
+  background: rgba(11, 158, 177, 0.714);
+  width: 100vw;
+  height: 80px;
 }
-footer,p{
-    color: white;
-    padding-top: 8px;
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  text-shadow: #000 1px 1px 1px;
+  font-size: 28px;
+  padding-left: 110px;
+}
+.nav-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  padding-right: 20px;
+}
+.nav-link {
+  margin-left: 60px;
+  text-shadow: #000 1px 1px 1px;
+}
+footer {
+  position: relative;
+  width: 100vw;
+  height: 52px;
+  background: #0b9fb3b6;
+  margin-top: -57px;
+}
+footer,
+p {
+  text-align: center;
+  color: white;
+  padding-top: 8px;
 }
