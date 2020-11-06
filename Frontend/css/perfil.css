@@ -1,0 +1,89 @@
+body {
+  background-color: #4d9fab !important;
+}
+
+.painel-form {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.form-inline .form-group input {
+  border-radius: 4px 0px 0px 4px;
+}
+
+button.btn {
+  border-radius: 4px 4px 4px 4px;
+}
+
+a.nova-cor,
+button.nova-cor {
+  background-color: #238b98;
+  border-color: #238b98;
+}
+
+.navbar {
+  flex-direction: column;
+  padding-top: 30px;
+  background-color: #238b98;
+}
+
+li.nav-item.mx-auto a.nav-link,
+.active > .nav-link {
+  color: white;
+}
+
+.collapse .navbar-collapse {
+  flex-direction: column;
+}
+
+img.avatar {
+  border-radius: 75px;
+  width: 60px;
+  display: block;
+}
+
+img.avatar-perfil {
+  width: 100px;
+  display: block;
+}
+
+.form-grupo1 {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid#238b98 !important;
+}
+
+small {
+  color: #238b98;
+}
+
+.container-form p {
+  color: #238b98;
+  font-style: italic;
+}
+
+label.form-check-label {
+  color: #238b98;
+  font-style: italic;
+}
+
+.container-form {
+  border-bottom: 1px dotted #238b98;
+  padding-bottom: 10px;
+}
+
+@media screen and(max-width: 348px) {
+  .form-inline .form-group input {
+    border-radius: 4px 4px 4px 4px;
+  }
+
+  button.btn {
+    border-radius: 4px 4px 4px 4px;
+  }
+}
+
+@media screen and(min-width: 992px) {
+  .navbar .navbar-expand-lg {
+    height: 100vw !important;
+  }
+}

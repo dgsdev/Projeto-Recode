@@ -1,0 +1,53 @@
+#nav{
+    position: fixed;
+    background-color:#0b9fb3b6 ;
+    width: 100vw;
+    height: 88px;
+  
+
+}
+.navbar-brand{
+    font-family: 'Playfair Display', serif; 
+    font-size: 28px;
+    margin: 0 630px 0 0;
+  
+}
+.nav-item{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    padding-left: 50px;
+    padding-right: 20px;
+    cursor: pointer;
+    
+}
+.video-background{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+#video{
+    background: black !;
+}
+
+.card{
+    background:#0b9fb3b6 ;
+    margin-top: -450px;
+    border: none;
+}
+.card-title{
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+}
+footer{
+    position: relative;
+    width: 100vw;
+    height: 52px;
+    margin-top: 220px;
+    text-align: center;
+    background:#0b9fb3b6 ;
+    
+}
+footer,p{
+    color: white;
+    padding-top: 8px;
+}
