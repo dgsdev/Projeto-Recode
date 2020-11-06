@@ -42,7 +42,7 @@ echo '<br> Cidade: '.$cidade;
 echo '<br> Estado: '.$estado;
 echo '<br> CEP: '.$cep;
 echo '<br> País: '.$pais;
-
+/*
 if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $conf_senha) {
 
     $senha_cripto = md5($senha);     
@@ -105,5 +105,5 @@ else if (strlen($senha) <= 3){
     </script>";
     
 }
-
+*/
 ?>
