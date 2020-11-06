@@ -58,9 +58,10 @@
             
                     <!--inicio formulário-->
         <div id="cadastro" class="col-lg-6 col-md-8 col-sm-6">
-            <form method="post" action="">
 
-                <legend>Cadastre-se</legend>
+                <form method="post" action="cadastro_usuario.php">
+
+                <legend><strong>Cadastre-se</strong></legend>
                 <p>
                     <label for="nome_cad">Digite seu nome completo:</label>
                     <input id="nome_cad" name="nome" required="required" type="text" />
@@ -68,7 +69,11 @@
 
                 <p>
                     <label for="identificacao_cad">Como quer ser identificado:</label>
-                    <input id="identificacao_cad" name="identificacao" required="required" type="text" />
+                    <input id="identificacao_cad" name="apelido" required="required" type="text" />
+                </p>
+                <p>
+                    <label for="identificacao_cad">Coloque Link Imagem de Perfil:</label>
+                    <input id="identificacao_cad" name="imagem" type="url" />
                 </p>
 
                 <p>
@@ -77,32 +82,36 @@
                 </p>
 
 
-                <div class="senha">
+                <p>
                     <label for="cad_senha">Digite sua senha</label>
-                    <input id="cad_senha" name="senha_cad" required="required" type="password" />
+                    <input id="cad_senha" name="senha" required="required" type="password" />
+                </p>
+                <p>    
                     <label for="conf_senha">Confirme sua senha</label>
                     <input id="conf_senha" name="conf_senha" required="required" type="password" />
-                </div>
+                </p>
                 <br>
 
                 <!--cont... menu opções-->
 
-                <div class="checkbox">
+                <div class="radio">
                     <p>Em qual situação se enquadra?</p>
-                    <input type="checkbox" value="" name="opcao1" id="opc_surdez" />
-                    <label for="checkbox">Surdez</label>
-                    <input type="checkbox" value="" name="opcao2" id="opc_def" />
-                    <label for="checkbox">Def. auditiva</label>
-                    <input type="checkbox" value="" name="opcao3" id="opc_nenhum" />
-                    <label for="checkbox">Nenhum</label>
-                    <input type="checkbox" value="" name="opcao4" id="opc_outros" />
-                    <label for="checkbox">Outros</label>
+                    
+                    <input type="radio" value="Surdo" name="situacao" id="surdo" />
+                    <label for="surdo">Surdez</label>
+                    <input type="radio" value="Def. Auditiva" name="situacao" id="auditiva" />
+                    <label for="auditiva">Def. auditiva</label>
+                    <input type="radio" value="Ouvinte" name="situacao" id="ouvinte" />
+                    <label for="ouvinte">Ouvinte</label>
+                    <input type="radio" value="Outros" name="situacao" id="outros" />
+                    <label for="outros">Outros</label>
                 </div>
 
                 <!--fim formulário-->
                 
                 <br>
-                    <button type="submit" class="btn nova-cor">Enviar</button>
+                <button type="submit" class="btn nova-cor btn-info">Enviar</button>
+                    
             </form>
 
         </div>

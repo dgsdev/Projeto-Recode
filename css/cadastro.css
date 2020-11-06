@@ -38,9 +38,9 @@ label {
   position: relative;
 }
 
-input:not([type='checkbox']) {
+input:not([type='radio']) {
   width: 95%;
-  margin-top: 4px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #b2b2b2;
 }
@@ -51,6 +51,7 @@ button.nova-cor {
   width: 50%;
   cursor: pointer;
   color: #fff;
+
 }
 
 .senha {

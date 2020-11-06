@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+//Se não existir um valor do índice 'nome', então encerre a aplicação
+if (!isset($_SESSION['nome'])) {
+    header('Location: index.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,8 +40,8 @@
             </li>
             <li class="nav-item mx-auto active">
                 <a class="nav-link" href="perfil_usuario.php">
-                  <img class="avatar mb-2 mx-auto" src="./img/avatar.png"
-                  alt="foto do usuário">
+                  <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
+                  alt="<?php echo $_SESSION['nome']; ?>">
                   <span> Meu Perfil </span> </a>
             </li>
             <li class="nav-item mx-auto">
@@ -55,7 +67,7 @@
           <div class="container-form">
             <form class="d-flex align-items-center mt-5" action="perfil.php" method="post">
                 <div class="col-lg-3 d-flex justify-content-center">
-                  <img src="./img/avatar.png" class="avatar-perfil" alt="perfil" />
+                  <img src="<?php echo $_SESSION['imagem'] ?>" class="avatar-perfil" alt="<?php echo $_SESSION['nome']; ?>">
                 </div>
                 
                 <div class="col-lg-9">
@@ -214,16 +226,20 @@
                     </div>
 
                     <div class="col-lg-2 col-md-2 d-flex justify-content-center">
-                    <button type="submit" class="btn nova-cor text-white mt-2">Cancelar</button>
+                    <button type="reset" class="btn nova-cor text-white mt-2"> Cancelar</button>                                       
                     </div>
 
                     <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-                    <button type="submit" class="btn nova-cor text-white mt-2">Atualizar</button>
+                    <button type="reset" class="btn nova-cor text-white mt-2">Atualizar</button>
                     </div>
 
-                    <div class="col-lg-4 col-md-4" style="padding-top: 30px;">
-                      <a href="#" style="color: #8ac0ca;">Cancelar minha conta...</a>
+                   
+                    <section class="mt-5 p-5">
+                    <div class="alert alert-danger" role="alert">
+                    Cuidado! Ao Remover sua Conta, não Poderá ser Recuperada!
                     </div>
+                    <button type="button" class="btn btn-danger" onclick="confirmar()">Remover Conta</button>
+                    </section>
 
                   </div>
                 </div> 
@@ -233,6 +249,18 @@
                       <!-- Fim da seção perfil -->
           </div>
         </div>
+
+
+
+        <script>
+          function confirmar(){
+          let confirmacao = confirm("Você Realmente Deseja Excluir sua Conta?");
+
+          if (confirmacao == true) {
+        location.href = "remover_conta.php?id=" + <?php echo $_SESSION['id'] ?>
+            }
+          }
+        </script>
 
     <!-- JS Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
