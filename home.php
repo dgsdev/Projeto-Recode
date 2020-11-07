@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+//Se não existir um valor do índice 'nome', então encerre a aplicação
+if (!isset($_SESSION['idusuarios'])) {
+    header('Location: index.php');
+    exit;   
+} else {
+
+  require_once('conexao.php');
+
+  $postagens = $link->query("SELECT * FROM postagens JOIN usuarios WHERE fk_usuario = id ORDER BY id_postagens DESC");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,28 +36,25 @@
 <div class="row">
           <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">           
             <ul class="navbar-nav mr-auto d-flex flex-column">
+              
               <li class="nav-item mx-auto">
-                <a href="index.php">
-                <img src="./img/leao.png" alt="logo do site" width="100px" />
-                </a>
-              </li>
-              <li class="nav-item mx-auto">
+                
                   <a class="nav-link" href="perfil_usuario.php">
-                    <img class="avatar mb-2 mx-auto" src="./img/avatar.png"
-                    alt="foto do usuário">
+                    <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
+                    alt="<?php echo $_SESSION['nome']; ?>">
                     <span> Meu Perfil </span> </a>
               </li>
               <li class="nav-item mx-auto active">
                   <a class="nav-link" href="home_cursos.php"> Cursos <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="certificados.php"> Certificados </a>
+                  <a class="nav-link" href="#"> Certificados </a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="parceiros.php"> Parceiros </a>
+                  <a class="nav-link" href="#"> Parceiros </a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="configuracao.php"> Configuração </a>
+                  <a class="nav-link" href="sair.php"> Sair </a>
               </li>
             </ul>
           </div>  
@@ -73,6 +86,8 @@
               </div>
     
               <!-- Barra de busca -->
+              <h4>Olá, <?php echo $_SESSION['nome']; ?>
+
               <div class="d-flex justify-content-end">
                 <div class="input-group mt-3 mb-3 pr-0 col-lg-6">
                   <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -82,15 +97,17 @@
                 </div>
               </div>  
 
+              
+
               <!-- Cards -->
                     <div class="row" style="text-align: center;">
                       <div class="col-lg-4 col-md-6 col-sm-6 mt-4 mb-4 d-flex justify-content-center">
                       <div class="card" style="width: 18rem;">
                       <img class="card-img-top" src="./img/campo.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn nova-cor text-white">Go somewhere</a>
+                        <h5 class="card-title">Carinhosamente</h5>
+                        <p class="card-text">Educação em Libras</p>
+                        <a href="./player.php" class="btn nova-cor text-white">Video Libras</a>
                       </div>
                     </div>
                       </div>
@@ -154,6 +171,10 @@
                       <!-- Fim da seção de produtos -->
           </div>
         </div>
+        <!-- Loading -->
+        <div class="spinner-border text-info" role="status">
+       <span class="sr-only">Loading...</span>
+      </div>
 
     <!-- JS Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

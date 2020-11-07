@@ -6,9 +6,10 @@ session_start();
 
 $id = $_GET['id'];
 
-if ($id == $_SESSION['id']) {
 
-    $result = $link->query("DELETE FROM usuarios WHERE id = $id");
+if ($id == $_SESSION['idusuarios']) {
+
+    $result = $link->query("DELETE FROM usuarios WHERE idusuarios = $id");
 
     if($result == true){
         session_destroy();

@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+//Se não existir um valor do índice 'nome', então encerre a aplicação
+if (!isset($_SESSION['idusuarios'])) {
+    header('Location: index.php');
+    exit;   
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,28 +54,24 @@
         <div class="row">
           <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">           
             <ul class="navbar-nav mr-auto d-flex flex-column">
-              <li class="nav-item mx-auto">
-                <a href="index.php">
-                <img src="./img/leao.png" alt="logo do site" width="100px" />
-                </a>
-              </li>
+            
               <li class="nav-item mx-auto">
                   <a class="nav-link" href="perfil_usuario.php">
-                    <img class="avatar mb-2 mx-auto" src="./img/avatar.png"
-                    alt="foto do usuário">
+                    <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
+                    alt="<?php echo $_SESSION['nome']; ?>">
                     <span> Meu Perfil </span> </a>
               </li>
               <li class="nav-item mx-auto active">
                   <a class="nav-link" href="home.php"> Cursos <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="certificados.php"> Certificados </a>
+                  <a class="nav-link" href="#"> Certificados </a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="parceiros.php"> Parceiros </a>
+                  <a class="nav-link" href="#"> Parceiros </a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="configuracao.php"> Configuração </a>
+              <a class="nav-link" href="sair.php"> Sair </a>
               </li>
             </ul>
           </div> 

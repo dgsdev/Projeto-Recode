@@ -31,8 +31,8 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div class="navbar-nav ml-auto">                            
                         <!-- Button trigger modal -->
-<button type="button" class="btn btn-entrar" data-toggle="modal" data-target="#exampleModal">
-  Entrar
+<button type="button" class="btn btn-entrar btn-outline-info" data-toggle="modal" data-target="#exampleModal">
+  Entrar 
 </button>
 
 <!-- Modal -->
@@ -46,20 +46,25 @@
         </button>
       </div>
       <div class="modal-body">
-      <form>
+
+      <form action="login_usuario.php" method="post">
+
         <div class="form-group">
-         <label for="exampleInputEmail1">Email</label>
-         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+         <label for="email">Email</label>
+         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Senha</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="senha">
+          <label for="senha">Senha</label>
+          <input type="password" class="form-control" id="senha" name="senha">
         </div>
-        <div class="d-flex justify-content-around align-bottom">
-         <button type="submit" class="btn nova-cor" style="color: white;">Enviar</button>
+        
+        <div class="d-flex justify-content-around align-bottom">          
+         <button type="submit" class="btn nova-cor btn-info bg-info" style="color: white;">Entrar</button>
           <a href="cadastro.php" class="pt-2" style="color: #0b9fb3b6;">Não tem cadastro? Faça o seu aqui</a>            
         </div>
+
       </form>
+
       </div>
       <div class="modal-footer">        
       </div>

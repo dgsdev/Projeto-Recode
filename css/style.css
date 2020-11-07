@@ -66,6 +66,7 @@ nav {
   background-color: #fff;
   border-color: #fff;
   width: 150px;
+  font-weight: bold;
 }
 
 .navbar-toggler {
@@ -79,6 +80,7 @@ nav {
 button.nova-cor {
   background-color: #8ac0ca;
   border-color: #8ac0ca;
+  width: 130px;
 }
 
 footer {

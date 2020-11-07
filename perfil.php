@@ -5,11 +5,12 @@ require_once('conexao.php');
 session_start();
 
 //Se não existir um valor do índice 'nome', então encerre a aplicação
-if (!isset($_SESSION['nome'])) {
+if (!isset($_SESSION['nome']) && !isset($_SESSION['idusuarios'])) {
     header('Location: index.php');
     exit;
 }
 
+$idusuario = $_SESSION['idusuarios'];
 $nome = $_POST['nome'];
 $apelido = $_POST['apelido'];
 $imagem = $_POST['imagem'];
@@ -43,68 +44,35 @@ echo '<br> Estado: '.$estado;
 echo '<br> CEP: '.$cep;
 echo '<br> País: '.$pais; */
 
-if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $conf_senha) {
-
+if($senha == $conf_senha) {
+    
     $senha_cripto = md5($senha);     
-
-    $sql = "INSERT INTO `usuarios` (`idusuarios`, `nome`, `apelido`, `imagem`, `email`, `senha`, `conf_senha`, `situacao`, `grau`, `sexo`, `nascimento`, `endereco`, `bairro`, `cidade`, `estado`, `cep`, `pais`) 
-    VALUES (NULL, '$nome', '$apelido', '$imagem', '$email', '$senha_cripto', '', '$situacao', '$grau', '$sexo', '$nascimento', '$endereco', '$bairro', '$cidade', '$estado', '$cep', '$pais')";
-
-    $link->query($sql);
-     
-    echo "<script>
-    alert('Atualizado com Sucesso!')
-    window.location.href = 'index.php'
-    </script>";
     
-}
-else if ($senha != $conf_senha){
-
-    echo "<script>
-    alert('As senhas devem ser iguais, tente novamente!')
-    window.location.href = 'cadastro.php'
-    </script>";
-   
-}
-else if (strlen($nome) <= 3){
-
-    echo "<script>
-    alert('Digite um nome válido para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
-    </script>";
-  
-}
-else if (strlen($apelido) <= 3){
-
-    echo "<script>
-    alert('Digite um nome válido para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
-    </script>";
-
-}
-/*else if (strlen($imagem) == 0){
-
-    echo "<script>
-    alert('Coloque uma imagem para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
-    </script>";
-  
-}*/
-else if (strlen($email) <= 3 ){
-
-    echo "<script>
-    alert('Digite um e-mail válido para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
-    </script>";
+    /*  $sql = "UPDATE INTO `usuarios` (`idusuarios`, `nome`, `apelido`, `imagem`, `email`, `senha`, `conf_senha`, `situacao`, `grau`, `sexo`, `nascimento`, `endereco`, `bairro`, `cidade`, `estado`, `cep`, `pais`) 
+    VALUES (NULL, '$nome', '$apelido', '$imagem', '$email', '$senha_cripto', '', '$situacao', '$grau', '$sexo', '$nascimento', '$endereco', '$bairro', '$cidade', '$estado', '$cep', '$pais')"; */
     
-}
-else if (strlen($senha) <= 3){
-
-    echo "<script>
-    alert('Digite uma senha válida para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
-    </script>";
+    $update = "UPDATE `usuarios` SET `nome`= '$nome',`apelido`= '$apelido', `imagem`='$imagem', `email`='$email', `senha`='$senha_cripto', `situacao`='$situacao', `grau`='$grau', `sexo`='$sexo', `nascimento`='$nascimento', `endereco`='$endereco', `bairro`='$bairro', `cidade`='$cidade', `estado`='$estado', `cep`='$cep', `pais`='$pais' WHERE `idusuarios` = '$idusuario'";
     
+    $link->query($update); 
+    
+    if ($link == true) {
+        
+        echo "<script>
+        alert('Atualizado com Sucesso!')
+        window.location.href = 'index.php'
+        </script>";
+    } else {
+        echo "<script>
+        alert('Não foi possível fazer atualização!')
+        window.location.href = 'perfil.php'
+        </script>";
+    }
+} else {
+    
+    echo "<script>
+    alert('Sua senhas não coincidem!')
+    window.location.href = 'perfil.php'
+    </script>";
 }
-
+    
 ?>

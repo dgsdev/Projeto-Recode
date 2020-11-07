@@ -1,11 +1,30 @@
 <?php
 
+require_once('conexao.php');
+
 session_start();
 
 //Se não existir um valor do índice 'nome', então encerre a aplicação
 if (!isset($_SESSION['nome'])) {
     header('Location: index.php');
     exit;
+}else {
+ 
+  $_SESSION['nome']; 
+  $_SESSION['imagem']; 
+  $_SESSION['email']; 
+  $_SESSION['idusuarios']; 
+  $_SESSION['nascimento'];
+  $_SESSION['apelido'];
+  $_SESSION['sexo'];
+  $_SESSION['endereco']; 
+  $_SESSION['bairro']; 
+  $_SESSION['cidade']; 
+  $_SESSION['estado'];
+  $_SESSION['pais']; 
+  $_SESSION['cep'];
+  $_SESSION['situacao'];
+  $_SESSION['grau'];
 }
 
 ?>
@@ -33,10 +52,7 @@ if (!isset($_SESSION['nome'])) {
 
         <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">           
           <ul class="navbar-nav mr-auto d-flex flex-column">
-            <li class="nav-item mx-auto">
-              <a href="index.php">
-              <img src="./img/leao.png" alt="logo do site" width="100px" />
-              </a>
+          
             </li>
             <li class="nav-item mx-auto active">
                 <a class="nav-link" href="perfil_usuario.php">
@@ -48,13 +64,13 @@ if (!isset($_SESSION['nome'])) {
                 <a class="nav-link" href="home_cursos.php"> Cursos <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mx-auto">
-                <a class="nav-link" href="certificados.php"> Certificados </a>
+                <a class="nav-link" href="#"> Certificados </a>
             </li>
             <li class="nav-item mx-auto">
-                <a class="nav-link" href="parceiros.php"> Parceiros </a>
+                <a class="nav-link" href="#"> Parceiros </a>
             </li>
             <li class="nav-item mx-auto">
-                <a class="nav-link" href="configuracao.php"> Configuração </a>
+            <a class="nav-link" href="sair.php"> Sair </a>
             </li>
           </ul>
           </div>
@@ -65,7 +81,9 @@ if (!isset($_SESSION['nome'])) {
           <!-- Seção 1 -->
         <section class="container col-lg-9 painel-form mt-5">
           <div class="container-form">
+
             <form class="d-flex align-items-center mt-5" action="perfil.php" method="post">
+
                 <div class="col-lg-3 d-flex justify-content-center">
                   <img src="<?php echo $_SESSION['imagem'] ?>" class="avatar-perfil" alt="<?php echo $_SESSION['nome']; ?>">
                 </div>
@@ -73,21 +91,25 @@ if (!isset($_SESSION['nome'])) {
                 <div class="col-lg-9">
                   <div class="row mb-3">
                     <div class="col-lg-3">
-                      <input type="text" class="form-control form-grupo1" id="apelido" name="apelido">
+                      <input type="text" class="form-control form-grupo1" id="apelido" value="<?php echo $_SESSION['apelido']; ?>" name="apelido">
                       <small for="apelido">Apelido:</small>
                     </div>
+                    <div class="col-lg-3">
+                      <input type="url" class="form-control form-grupo1" id="imagem" value="<?php echo $_SESSION['imagem']; ?>" name="imagem">
+                      <small for="imagem">Imagem:</small>
+                    </div>
                     <div class="col-lg-6">
-                      <input type="text" class="form-control form-grupo1" id="nome" name="nome">
+                      <input type="text" class="form-control form-grupo1" id="nome" value="<?php echo $_SESSION['nome']; ?>" name="nome">
                       <small for="nome">Nome:</small>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-3">
-                      <input type="text" class="form-control form-grupo1" id="nascimento" name="nascimento">
+                      <input type="date" class="form-control form-grupo1" id="nascimento" value="<?php echo $_SESSION['apelido']; ?>" name="nascimento">
                       <small for="data-nasc">Data de Nascimento:</small>
                     </div>
                     <div class="col-lg-6">
-                    <input type="text" class="form-control form-grupo1" id="sexo" name="sexo">
+                    <input type="text" class="form-control form-grupo1" id="sexo" value="<?php echo $_SESSION['sexo']; ?>" name="sexo">
                     <small for="sexo">Sexo:</small>
                     </div>
                   </div>
@@ -102,32 +124,32 @@ if (!isset($_SESSION['nome'])) {
 
                   <div class="row mb-3">
                     <div class="col-lg-4 col-md-6">
-                      <input type="text" class="form-control form-grupo1" id="endereco" name="endereco">
+                      <input type="text" class="form-control form-grupo1" id="endereco" value="<?php echo $_SESSION['endereco']; ?>" name="endereco">
                       <small for="rua">Rua:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
-                      <input type="text" class="form-control form-grupo1" id="bairro" name="bairro">
+                      <input type="text" class="form-control form-grupo1" id="bairro" value="<?php echo $_SESSION['bairro']; ?>" name="bairro">
                       <small for="bairro">Bairro:</small>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
-                      <input type="text" class="form-control form-grupo1" id="cidade" name="cidade">
+                      <input type="text" class="form-control form-grupo1" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" name="cidade">
                       <small for="cidade">Cidade:</small>
                     </div>
 
                     <div class="col-lg-2 col-md-2">
-                    <input type="text" class="form-control form-grupo1" id="estado" name="estado">
+                    <input type="text" class="form-control form-grupo1" id="estado" value="<?php echo $_SESSION['estado']; ?>" name="estado">
                     <small for="estado">Estado:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-4">
-                    <input type="text" class="form-control form-grupo1" id="cep" name="cep">
+                    <input type="text" class="form-control form-grupo1" id="cep" value="<?php echo $_SESSION['cep']; ?>" name="cep">
                     <small for="cep">CEP:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-4">
-                    <input type="text" class="form-control form-grupo1" id="pais" name="pais">
+                    <input type="text" class="form-control form-grupo1" id="pais" value="<?php echo $_SESSION['pais']; ?>" name="pais">
                     <small for="pais">País:</small>
                     </div>
                   </div>
@@ -211,7 +233,7 @@ if (!isset($_SESSION['nome'])) {
 
                   <div class="row mb-3">
                     <div class="col-lg-4 col-md-6">
-                      <input type="email" class="form-control form-grupo1" id="email" name="email">
+                      <input type="email" class="form-control form-grupo1" id="email" value="<?php echo $_SESSION['email']; ?>" name="email">
                       <small for="email">Email:</small>
                     </div>
 
@@ -230,7 +252,7 @@ if (!isset($_SESSION['nome'])) {
                     </div>
 
                     <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-                    <button type="reset" class="btn nova-cor text-white mt-2">Atualizar</button>
+                    <button type="submit" class="btn nova-cor text-white mt-2">Atualizar</button>
                     </div>
 
                    
@@ -257,7 +279,7 @@ if (!isset($_SESSION['nome'])) {
           let confirmacao = confirm("Você Realmente Deseja Excluir sua Conta?");
 
           if (confirmacao == true) {
-        location.href = "remover_conta.php?id=" + <?php echo $_SESSION['id'] ?>
+        location.href = "remover_conta.php?id=" + <?php echo $_SESSION['idusuarios']; ?>
             }
           }
         </script>

@@ -10,9 +10,9 @@ $id = $_SESSION['id'];
 
 if (strlen($postagem) > 0) {
        
-    $result = $link->query("INSERT INTO postagens (video, conteudo, fk_usuario) VALUES ('$video', $postagem', '$id')");
+    $result = $link->query("INSERT INTO postagens (videoprincipal, titulo, descricao, imagemcard, videolibras, fk_usuario) VALUES ('$videoprincipal', $titulo', '$descricao', '$imagemcard', 'videolibras')");
 
-    if ($result == true) {
+ /*   if ($result == true) {
         
         echo "
         <script>
@@ -38,4 +38,4 @@ if (strlen($postagem) > 0) {
             location.href = 'home.php'
         </script>";
 
-}
+}*/
