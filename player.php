@@ -100,11 +100,11 @@ if (!isset($_SESSION['idusuarios'])) {
                 <div class="container">
                   <h4 class="pb-2 d-flex justify-content-center">Demonstração</h4>
                 <video controls class="w-100 meus_videos parado">
-                    <source src="./video/Forest - 49981.mp4" type="video/mp4" />
+                    <source src="./video/carinhosamente_audio.mp4" type="video/mp4" />
                 </video>
                 <video id="vd2" class="w-20 meus_videos parado">
                     <source
-                      src="https://www.w3schools.com/html/mov_bbb.mp4"
+                      src="./video/carinhosamente_libras.mp4"
                       type="video/mp4"
                     />
                 </video>
@@ -135,6 +135,19 @@ if (!isset($_SESSION['idusuarios'])) {
         });
       });
     </script>
+
+      <!-- Plugin Vlibras -->
+      <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+        </div>
 
     <!-- JS Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -1,10 +1,10 @@
 <?php
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "jump";
+$servername = "sql102.epizy.com";
+$username = "epiz_26883339";
+$password = "@DGSjuh12";
+$database = "epiz_26883339_jump";
 
 $link = mysqli_connect($servername, $username, $password, $database);
 

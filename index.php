@@ -24,7 +24,9 @@
 
                 <!-- Começo da nav-menu -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <a class="navbar-brand text-light" href="#"><b>LOGO</b></a>
+    <a class="navbar-brand text-light" href="index.php">
+      <img src="./img/branco.png" alt="Jump-logo" width="150px"/>
+    </a>
       <button class="navbar-toggler btn btn-entrar" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
         Entrar
       </button>
@@ -79,7 +81,9 @@
                     <!-- começo da parte do texto -->
             <div id="content" class="col-lg-6 col-md-6 col-sm-6">
             <h2>JUMP</h2>
-            <p style="font-size:1.1rem;">Frase que resuma o projeto,mas que deixe claro sua intenção,proposta e quem queremos impactar.</p>
+            <p style="font-size:1.1rem;">
+            Jump é uma plataforma onde as pessoas podem, colaborativamente, subir traduções em LIBRAS para vídeos sem acessibilidade de maneira prática e fácil.
+            </p>
             </div>
                     <!-- fim da parte do texto -->
             
@@ -93,6 +97,20 @@
                     
         </footer>
 </div>
+
+<!-- Plugin Vlibras -->
+<div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+        </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
