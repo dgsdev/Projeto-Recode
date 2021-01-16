@@ -34,7 +34,7 @@ if (!isset($_SESSION['nome'])) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Perfil - Novo Site</title>
+    <title>Jump | Squad 8</title>
     <link rel="stylesheet" type="text/css" href="css/perfil.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="./js/funcoes.js"></script>
@@ -61,11 +61,9 @@ if (!isset($_SESSION['nome'])) {
                   <span> Meu Perfil </span> </a>
             </li>
             <li class="nav-item mx-auto">
-                <a class="nav-link" href="home_cursos.php"> Cursos <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item mx-auto">
-                <a class="nav-link" href="#"> Certificados </a>
-            </li>
+            
             <li class="nav-item mx-auto">
                 <a class="nav-link" href="#"> Parceiros </a>
             </li>

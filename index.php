@@ -25,7 +25,7 @@
                 <!-- Começo da nav-menu -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <a class="navbar-brand text-light" href="index.php">
-      <img src="./img/branco.png" alt="Jump-logo" width="150px"/>
+      <img src="./img/marca.svg" alt="Jump-logo" width="150px"/>
     </a>
       <button class="navbar-toggler btn btn-entrar" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
         Entrar

@@ -15,7 +15,7 @@ if (!isset($_SESSION['idusuarios'])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap</title>
+    <title>Carinhoso</title>
 
     <link
       rel="stylesheet"
@@ -98,7 +98,7 @@ if (!isset($_SESSION['idusuarios'])) {
               <!-- Janela do Vídeo -->
               <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h4 class="pb-2 d-flex justify-content-center">Demonstração</h4>
+                  <h4 class="pb-2 d-flex justify-content-center">Carinhoso - Demonstração</h4>
                 <video controls class="w-100 meus_videos parado">
                     <source src="./video/carinhosamente_audio.mp4" type="video/mp4" />
                 </video>
