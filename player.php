@@ -15,7 +15,7 @@ if (!isset($_SESSION['idusuarios'])) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carinhoso</title>
+    <title>Jump | Carinhoso</title>
 
     <link
       rel="stylesheet"
@@ -54,19 +54,23 @@ if (!isset($_SESSION['idusuarios'])) {
         <div class="row">
           <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">           
             <ul class="navbar-nav mr-auto d-flex flex-column">
-            
+              
+                <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg"
+                    alt="Jump">
               <li class="nav-item mx-auto">
                   <a class="nav-link" href="perfil_usuario.php">
                     <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
                     alt="<?php echo $_SESSION['nome']; ?>">
+                    
                     <span> Meu Perfil </span> </a>
               </li>
               <li class="nav-item mx-auto active">
-                  <a class="nav-link" href="home.php"> Cursos <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item mx-auto">
+              <!--<li class="nav-item mx-auto">
                   <a class="nav-link" href="#"> Certificados </a>
-              </li>
+              </li>-->
+             
               <li class="nav-item mx-auto">
                   <a class="nav-link" href="#"> Parceiros </a>
               </li>
@@ -85,11 +89,14 @@ if (!isset($_SESSION['idusuarios'])) {
               <div class="col-xl-12 text-center mt-2">
                 <div class="properties__button text-center">
                         <nav class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                          <a class="nav-link active">todos</a>
-                          <a class="nav-link">meus cursos</a>
-                          <a class="nav-link">menu</a>
-                          <a class="nav-link">menu</a>
-                          <a class="nav-link">menu</a>
+                          <a class="nav-link active">Todos</a>
+                          <a class="nav-link">Meus vídeos</a>
+                          <!--
+                          <a class="nav-link">Projetos</a>
+                          <a class="nav-link">Seja Voluntário</a>
+                          <a class="nav-link">Apoie</a>
+                          <a class="nav-link">Contato</a>
+                          -->
                         </nav>
                   </div>         
                 </div>
@@ -98,7 +105,7 @@ if (!isset($_SESSION['idusuarios'])) {
               <!-- Janela do Vídeo -->
               <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h4 class="pb-2 d-flex justify-content-center">Carinhoso - Demonstração</h4>
+                  <h4 class="pb-2 d-flex justify-content-center">Carinhoso - Demo</h4>
                 <video controls class="w-100 meus_videos parado">
                     <source src="./video/carinhosamente_audio.mp4" type="video/mp4" />
                 </video>

@@ -24,9 +24,9 @@
     <div class="overlay"></div>
 
                 <!-- Começo da nav-menu -->
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <a class="navbar-brand text-light" href="index.php">
-                <img src="./img/branco.png" alt="Jump-logo" width="150px"/>
+                <img src="./img/marca.svg" alt="Jump-logo" width="150px"/>
             </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -34,13 +34,14 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Inicio<span class="sr-only">(Página atual)</span></a>
+                                <a class="nav-link text-light" href="index.php">Início<span class="sr-only">(Página atual)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Cursos</a>
+                                <a class="nav-link text-light" href="#"></a>
                             </li>
                     
-                    <!-- começo do dropdown -->
+                    
+                    <!-- começo do dropdown 
                             
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,7 +55,7 @@
                     </ul>
                 </div>
 
-                        <!--Fim do dropdown-->
+                        Fim do dropdown-->
             </nav>
                         <!-- Fim da Nav-menu -->
             
@@ -94,7 +95,7 @@
                 </p>
                 <br>
 
-                <!--cont... menu opções-->
+                <!--cont... menu opções
 
                 <div class="radio">
                     <p>Em qual situação se enquadra?</p>
@@ -107,12 +108,12 @@
                     <label for="ouvinte">Ouvinte</label>
                     <input type="radio" value="Outros" name="situacao" id="outros" />
                     <label for="outros">Outros</label>
-                </div>
+                </div> -->
 
                 <!--fim formulário-->
                 
                 <br>
-                <button type="submit" class="btn nova-cor btn-info">Enviar</button>
+                <button type="submit" class="btn btn-info w-25">Enviar</button>
                     
             </form>
 

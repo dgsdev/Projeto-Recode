@@ -28,33 +28,41 @@ if (!isset($_SESSION['idusuarios'])) {
 <body style="background-color: #4d9fab !important;">
   <!-- Início do menu -->
   <div class="container-fluid">
-    <div class="row">
-      <nav class="col-lg-2 navbar navbar-expand-lg navbar-light d-flex 
-          align-items-start">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="row">
-          <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">
+      <div class="row">
+        <nav class="col-lg-2 navbar navbar-expand-lg navbar-light d-flex 
+          align-items-start">          
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+<div class="row">
+          <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">           
             <ul class="navbar-nav mr-auto d-flex flex-column">
-              <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg" alt="Jump">
+              <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg"
+                    alt="Jump">
               <li class="nav-item mx-auto">
-              <!-- Esse é um teste, trabalhe melhor da próxima vez kk! sim senhor-->
-                <a class="nav-link" href="perfil_usuario.php">
-                  <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>" alt="<?php echo $_SESSION['nome']; ?>">
-                  <span> Meu Perfil </span> </a>
+                
+                  <a class="nav-link" href="perfil_usuario.php">
+                   
+                    <br>
+                    <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
+                    alt="<?php echo $_SESSION['nome']; ?>">
+                    <br>
+                    <span> Meu Perfil </span> </a>
               </li>
               <li class="nav-item mx-auto active">
-                <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
+              </li>
+             <!-- <li class="nav-item mx-auto">
+                  <a class="nav-link" href="#"> Certificados </a>
+              </li> -->
+              <li class="nav-item mx-auto">
+                  <a class="nav-link" href="#"> Parceiros </a>
               </li>
               <li class="nav-item mx-auto">
-                <a class="nav-link" href="#"> Parceiros </a>
-              </li>
-              <li class="nav-item mx-auto">
-                <a class="nav-link" href="sair.php"> Sair </a>
+                  <a class="nav-link" href="sair.php"> Sair </a>
               </li>
             </ul>
-          </div>
+          </div> 
 
           <!--
           <div class="col">
@@ -88,7 +96,7 @@ if (!isset($_SESSION['idusuarios'])) {
 
           <div class="d-flex justify-content-end">
             <div class="input-group mt-3 mb-3 pr-0 col-lg-6">
-              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Pesquisar contéudo em libras...">
               <div class="input-group-append">
                 <button class="btn nova-cor text-white" type="button" id="button-addon2">Pesquisa</button>
               </div>

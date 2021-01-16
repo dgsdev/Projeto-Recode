@@ -54,6 +54,8 @@ if (!isset($_SESSION['nome'])) {
           <ul class="navbar-nav mr-auto d-flex flex-column">
           
             </li>
+              <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg"
+                    alt="Jump">
             <li class="nav-item mx-auto active">
                 <a class="nav-link" href="perfil_usuario.php">
                   <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
@@ -63,7 +65,9 @@ if (!isset($_SESSION['nome'])) {
             <li class="nav-item mx-auto">
                 <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
             </li>
-            
+            <!--<li class="nav-item mx-auto">
+                <a class="nav-link" href="#"> Certificados </a>
+            </li> -->
             <li class="nav-item mx-auto">
                 <a class="nav-link" href="#"> Parceiros </a>
             </li>
@@ -164,7 +168,7 @@ if (!isset($_SESSION['nome'])) {
 
                     <div class="col-lg-3 col-md-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="situacao" id="ouvinte" value="Ouvinte" checked>
+                        <input class="form-check-input" type="radio" name="situacao" id="ouvinte" value="Ouvinte">
                         <label class="form-check-label" for="ouvinte">
                           Ouvinte
                         </label>
@@ -175,7 +179,7 @@ if (!isset($_SESSION['nome'])) {
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="situacao" id="surdo" value="Surdo">
                       <label class="form-check-label" for="surdo">
-                        Surdo
+                        Surdez
                       </label>
                     </div>
                     </div>
@@ -214,7 +218,7 @@ if (!isset($_SESSION['nome'])) {
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="grau" id="outro" value="Outro">
                       <label class="form-check-label" for="outro">
-                        Surdo
+                        Profunda
                       </label>
                     </div>
                     </div>

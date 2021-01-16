@@ -46,8 +46,8 @@ input:not([type='radio']) {
 }
 
 button.nova-cor {
-  background-color: #8ac0ca;
-  border-color: #8ac0ca;
+  background-color: #238b98;
+  border-color: #238b98;
   width: 50%;
   cursor: pointer;
   color: #fff;
@@ -58,3 +58,4 @@ button.nova-cor {
   display: inline-block;
   margin: 0;
 }
+
