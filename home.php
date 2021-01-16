@@ -1,5 +1,5 @@
 <?php
-// teste
+
 session_start();
 
 //Se não existir um valor do índice 'nome', então encerre a aplicação
