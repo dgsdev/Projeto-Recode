@@ -39,7 +39,7 @@ if (!isset($_SESSION['idusuarios'])) {
             <ul class="navbar-nav mr-auto d-flex flex-column">
               <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg" alt="Jump">
               <li class="nav-item mx-auto">
-              <!-- Esse é um teste, trabalhe melhor da próxima vez kk!-->
+              <!-- Esse é um teste, trabalhe melhor da próxima vez kk! sim senhor-->
                 <a class="nav-link" href="perfil_usuario.php">
                   <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>" alt="<?php echo $_SESSION['nome']; ?>">
                   <span> Meu Perfil </span> </a>
