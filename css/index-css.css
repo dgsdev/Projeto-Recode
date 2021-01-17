@@ -1,0 +1,116 @@
+body{
+    font-family: 'Comfortaa', cursive;
+}
+
+.navbar{
+    padding: 20px 0;
+    background-color: #1d8490;
+}
+
+nav .navbar-brand{
+    margin-right: 60% !important;
+}
+
+button{
+    background-color: #1d8490;
+}
+
+.dropdown .dropdown-menu{
+    background-color: #1d8490;
+    margin-left: -13rem !important;
+    width: 18rem !important;
+}
+
+.dropdown .dropdown-menu .form-group{   
+    padding: 0 1rem;
+}
+
+.dropdown .dropdown-menu a{
+    text-decoration: none !important;
+}
+
+.dropdown .dropdown-menu .nav-cadastro a small{
+    margin-left: 1rem !important;
+
+}
+
+.form-text{
+    color: white !important;
+    display: inline;
+    vertical-align: -1vh;
+}
+
+.dropdown .dropdown-menu .nav-cadastro{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dropdown .dropdown-menu .nav-cadastro button{
+    margin-left: -20px !important;
+    margin-bottom: 1rem !important;
+    font-weight: bold;
+}
+
+main{
+    width: 100%;
+}
+
+.sessao1{
+    height: 600px;
+}
+
+.sessao1-box-texto{
+    width: 40%;
+    height: 50%;
+}
+
+.sessao1-box-texto .box-texto h1{
+    font-family: arial;
+    font-size: 2.3rem;
+}
+
+.sessao1-box-texto .box-texto p{
+    font-size: 1.4rem;
+}
+
+.sessao2{
+    height: 600px;
+    background-color: #1d8490;
+    color: white;
+}
+
+.sessao2-box-texto{
+    width: 80%;
+    height: 70%;
+}
+
+.sessao3{
+    height: 700px;
+}
+
+.sessao3-box-texto{
+    width: 80%;
+    height: 70%;
+}
+
+.sessao3-box-texto .row .col-sm-6 .annie-img{
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure figcaption{
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.sessao4{
+    height: 700px;
+    background-color: #1d8490;
+    color: white;
+}
+
+.sessao4-box-texto{
+    width: 80%;
+    height: 70%;
+}
