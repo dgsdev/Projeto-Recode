@@ -2,21 +2,31 @@ body{
     font-family: 'Comfortaa', cursive;
 }
 
-.navbar{
-    padding: 20px 0;
-    background-color: #1d8490;
+::-webkit-scrollbar{
+    width: 10px;
+    background-image: linear-gradient(to bottom, #177681, #39aebb, #2a8994, #33929d, #3b9ca7);
 }
 
-nav .navbar-brand{
-    margin-right: 60% !important;
+::-webkit-scrollbar-thumb{
+    background-color: #09565f;    border-radius: 25px;
+}
+
+.navbar{
+    padding: 15px 0;
+    /* background-color: #1d8490; */
+    background-image: linear-gradient(to bottom, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+}
+
+.img-logo{
+    width: 145px;
 }
 
 button{
-    background-color: #1d8490;
+    background-color: transparent;
 }
 
 .dropdown .dropdown-menu{
-    background-color: #1d8490;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
     margin-left: -13rem !important;
     width: 18rem !important;
 }
@@ -55,33 +65,46 @@ main{
     width: 100%;
 }
 
+h1{
+    font-family: arial;
+    font-size: 2.4rem;
+    color: #106770;
+}
+
 .sessao1{
-    height: 510px;
+    height: 550px;
 }
 
 .sessao1-box-texto{
-    width: 40%;
+    width: 550px;
     height: 50%;
 }
 
-.sessao1-box-texto .box-texto h1{
-    font-family: arial;
-    font-size: 2.3rem;
-}
-
-.sessao1-box-texto .box-texto p{
+.sessao1-box-texto p{
+    color: #106770;
+    font-weight: bold;
     font-size: 1.4rem;
+    line-height: 1.6rem;
 }
 
 .sessao2{
-    height: 700px;
-    background-color: #1d8490;
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
     color: white;
 }
 
 .sessao2-box-texto{
     width: 80%;
-    height: 70%;
+}
+
+.sessao2-box-texto h1{
+    color: white;
+}
+
+.sessao2-box-texto p{
+    font-size: 1.1rem !important;
 }
 
 .sessao3{
@@ -96,9 +119,10 @@ main{
 }
 
 .sessao3-box-texto .row .col-sm-5 .annie-img{
-    width: 70%;
+    width: 60%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
 }
 
 figure figcaption{
@@ -108,7 +132,7 @@ figure figcaption{
 }
 
 .sessao3-box-texto .row .col-sm-7 span{
-    font-size: 17px !important;
+    font-size: 0.96rem !important;
 }
 
 .sessao3-box-texto .row .col-sm-7 .fonte{
@@ -123,12 +147,50 @@ figure figcaption{
 }
 
 .sessao4{
-    height: 700px;
-    background-color: #1d8490;
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
     color: white;
 }
 
 .sessao4-box-texto{
     width: 80%;
-    height: 70%;
+}
+
+.sessao4-box-texto h1{
+    color: white;
+}
+
+.sessao5{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+}
+
+.sessao5-box-texto{
+    width: 90%;
+}
+
+.sessao5-box-texto h1{
+    font-size: 1.8rem;
+}
+
+.imgcarrocel{
+    width: 90px;
+    border-radius: 45px;
+}
+
+.descricao{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    width: 400px;
+}
+
+.footer{
+    background-image: linear-gradient(to top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    color: white;
+    font-size: 0.8rem;
+    font-style: italic;
 }
