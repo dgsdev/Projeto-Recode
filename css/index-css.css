@@ -56,7 +56,7 @@ main{
 }
 
 .sessao1{
-    height: 600px;
+    height: 510px;
 }
 
 .sessao1-box-texto{
@@ -74,7 +74,7 @@ main{
 }
 
 .sessao2{
-    height: 600px;
+    height: 700px;
     background-color: #1d8490;
     color: white;
 }
@@ -85,7 +85,9 @@ main{
 }
 
 .sessao3{
-    height: 700px;
+    width: 100%;
+    height: inherit;
+    overflow: visible;
 }
 
 .sessao3-box-texto{
@@ -93,15 +95,31 @@ main{
     height: 70%;
 }
 
-.sessao3-box-texto .row .col-sm-6 .annie-img{
-    width: 50%;
+.sessao3-box-texto .row .col-sm-5 .annie-img{
+    width: 70%;
     height: auto;
     border-radius: 8px;
 }
 
 figure figcaption{
-    padding-top: 10px;
+    padding-top: 6px;
     font-size: 10px;
+    font-style: italic;
+}
+
+.sessao3-box-texto .row .col-sm-7 span{
+    font-size: 17px !important;
+}
+
+.sessao3-box-texto .row .col-sm-7 .fonte{
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.sessao3-box-texto .row .col-sm-7 p{
+    margin-bottom: 15px;
 }
 
 .sessao4{
