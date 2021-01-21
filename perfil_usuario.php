@@ -1,6 +1,6 @@
 <?php
 
-require_once('conexao.php');
+require_once('./backend/conexao.php');
 
 session_start();
 
@@ -72,7 +72,7 @@ if (!isset($_SESSION['nome'])) {
                 <a class="nav-link" href="#"> Parceiros </a>
             </li>
             <li class="nav-item mx-auto">
-            <a class="nav-link" href="sair.php"> Sair </a>
+            <a class="nav-link" href="./backend/sair.php"> Sair </a>
             </li>
           </ul>
           </div>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['nome'])) {
         <section class="container col-lg-9 painel-form mt-5">
           <div class="container-form">
 
-            <form class="d-flex align-items-center mt-5" action="perfil.php" method="post">
+            <form class="d-flex align-items-center mt-5" action="./backend/perfil.php" method="post">
 
                 <div class="col-lg-3 d-flex justify-content-center">
                   <img src="<?php echo $_SESSION['imagem'] ?>" class="avatar-perfil" alt="<?php echo $_SESSION['nome']; ?>">
@@ -107,12 +107,16 @@ if (!isset($_SESSION['nome'])) {
                   </div>
                   <div class="row">
                     <div class="col-lg-3">
-                      <input type="date" class="form-control form-grupo1" id="nascimento" value="<?php echo $_SESSION['apelido']; ?>" name="nascimento">
-                      <small for="data-nasc">Data de Nascimento:</small>
+                      <input type="date" class="form-control form-grupo1" id="nascimento" value="<?php echo $_SESSION['nascimento']; ?>" name="nascimento">
+                      <small for="nascimento">Data de Nascimento:</small>
                     </div>
                     <div class="col-lg-6">
-                    <input type="text" class="form-control form-grupo1" id="sexo" value="<?php echo $_SESSION['sexo']; ?>" name="sexo">
-                    <small for="sexo">Sexo:</small>
+                      <select class="form-control form-grupo1" id="sexo" name="sexo">
+                        <option><?php echo $_SESSION['sexo']; ?></option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                        <option>Prefiro não responder</option>                        
+                      </select>                   
                     </div>
                   </div>
                 </div> 
@@ -162,13 +166,32 @@ if (!isset($_SESSION['nome'])) {
          <!-- Seção 3 -->
           <div class="container-form mt-2">
             <p> Em que situação se enquadra? </p>
+
+            <?php
+            $value=$_SESSION['situacao'];                   
+            
+            $result1 = ($value == "Ouvinte") ? "checked" : "";
+           
+            $result2 = ($value == "Surdo") ? "checked" : "";           
+           
+            $value=$_SESSION['grau'];  
+
+            $result3 = ($value == "Leve") ? "checked" : "";
+            
+            $result4 = ($value == "Moderada") ? "checked" : "";
+             
+            $result5 = ($value == "Severa") ? "checked" : "";
+            
+            $result6 = ($value == "Profunda") ? "checked" : "";
+
+            ?>
           
                 <div class="col-lg-9">
                   <div class="row mb-3">
 
                     <div class="col-lg-3 col-md-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="situacao" id="ouvinte" value="Ouvinte">
+                        <input class="form-check-input" type="radio" name="situacao" id="ouvinte" value="Ouvinte" <?php echo $result1; ?>>
                         <label class="form-check-label" for="ouvinte">
                           Ouvinte
                         </label>
@@ -177,19 +200,18 @@ if (!isset($_SESSION['nome'])) {
 
                     <div class="col-lg-6 col-md-6">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="situacao" id="surdo" value="Surdo">
+                      <input class="form-check-input" type="radio" name="situacao" id="surdo" value="Surdo" <?php echo $result2; ?>>
                       <label class="form-check-label" for="surdo">
-                        Surdez
+                        Surdo
                       </label>
                     </div>
                     </div>
-                  </div>
-                  
+                  </div>             
                   <p> Grau de deficiência auditiva </p>
                   <div class="row">                    
                     <div class="col-lg-3 col-md-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="grau" id="leve" value="Leve">
+                        <input class="form-check-input" type="radio" name="grau" id="leve" value="Leve" <?php echo $result3; ?>>
                         <label class="form-check-label" for="leve">
                           Leve
                         </label>
@@ -198,7 +220,7 @@ if (!isset($_SESSION['nome'])) {
 
                     <div class="col-lg-3 col-md-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="grau" id="moderada" value="Moderada">
+                      <input class="form-check-input" type="radio" name="grau" id="moderada" value="Moderada" <?php echo $result4; ?>>
                       <label class="form-check-label" for="moderada">
                         Moderada
                       </label>
@@ -207,7 +229,7 @@ if (!isset($_SESSION['nome'])) {
                     
                     <div class="col-lg-3 col-md-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="grau" id="severa" value="Severa">
+                        <input class="form-check-input" type="radio" name="grau" id="severa" value="Severa" <?php echo $result5; ?>>
                         <label class="form-check-label" for="severa">
                           Severa
                         </label>
@@ -216,8 +238,8 @@ if (!isset($_SESSION['nome'])) {
 
                     <div class="col-lg-3 col-md-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="grau" id="outro" value="Outro">
-                      <label class="form-check-label" for="outro">
+                      <input class="form-check-input" type="radio" name="grau" id="profunda" value="Profunda" <?php echo $result6; ?>>
+                      <label class="form-check-label" for="profunda">
                         Profunda
                       </label>
                     </div>
@@ -281,7 +303,7 @@ if (!isset($_SESSION['nome'])) {
           let confirmacao = confirm("Você Realmente Deseja Excluir sua Conta?");
 
           if (confirmacao == true) {
-        location.href = "remover_conta.php?id=" + <?php echo $_SESSION['idusuarios']; ?>
+        location.href = "./backend/remover_conta.php?id=" + <?php echo $_SESSION['idusuarios']; ?>
             }
           }
         </script>

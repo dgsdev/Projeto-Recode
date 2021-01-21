@@ -62,7 +62,7 @@
                     <!--inicio formulário-->
         <div id="cadastro" class="col-lg-6 col-md-8 col-sm-6">
 
-                <form method="post" action="cadastro_usuario.php">
+                <form method="post" action="./backend/cadastro_usuario.php">
 
                 <legend><strong>Cadastre-se</strong></legend>
                 <p>

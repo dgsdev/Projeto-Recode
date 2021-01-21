@@ -8,9 +8,10 @@ if (!isset($_SESSION['idusuarios'])) {
   exit;
 } else {
 
-  require_once('conexao.php');
+  require_once('./backend/conexao.php');
 
-  $postagens = $link->query("SELECT * FROM postagens JOIN usuarios WHERE fk_usuario = id ORDER BY id_postagens DESC");
+  $postagens = $link->query("SELECT * FROM postagens JOIN usuarios WHERE fk_usuario = idusuarios ORDER BY id_postagens DESC");
+ 
 }
 
 ?>
@@ -21,48 +22,47 @@ if (!isset($_SESSION['idusuarios'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jump | Squad 8</title>
-  <link rel="stylesheet" type="text/css" href="css/home.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
 </head>
 
 <body style="background-color: #4d9fab !important;">
   <!-- Início do menu -->
   <div class="container-fluid">
-      <div class="row">
-        <nav class="col-lg-2 navbar navbar-expand-lg navbar-light d-flex 
-          align-items-start">          
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-<div class="row">
-          <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">           
+    <div class="row">
+      <nav class="col-lg-2 navbar navbar-expand-lg navbar-light d-flex 
+          align-items-start">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="row">
+          <div class="col collapse navbar-collapse pt-2" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex flex-column">
-              <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg"
-                    alt="Jump">
+              <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg" alt="Jump">
               <li class="nav-item mx-auto">
-                
-                  <a class="nav-link" href="perfil_usuario.php">
-                   
-                    <br>
-                    <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
-                    alt="<?php echo $_SESSION['nome']; ?>">
-                    <br>
-                    <span> Meu Perfil </span> </a>
+
+                <a class="nav-link" href="perfil_usuario.php">
+
+                  <br>
+                  <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>" alt="<?php echo $_SESSION['nome']; ?>">
+                  <br>
+                  <span> Meu Perfil </span> </a>
               </li>
               <li class="nav-item mx-auto active">
-                  <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
               </li>
-             <!-- <li class="nav-item mx-auto">
+              <!-- <li class="nav-item mx-auto">
                   <a class="nav-link" href="#"> Certificados </a>
               </li> -->
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="#"> Parceiros </a>
+                <a class="nav-link" href="#"> Colaboradores </a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="sair.php"> Sair </a>
+                <a class="nav-link" href="./backend/sair.php"> Sair </a>
               </li>
             </ul>
-          </div> 
+          </div>
 
           <!--
           <div class="col">
@@ -80,8 +80,10 @@ if (!isset($_SESSION['idusuarios'])) {
           <div class="col-xl-12 text-center mt-2">
             <div class="properties__button text-center">
               <nav class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                <a class="nav-link active">Todos</a>
-                <a class="nav-link">Meus cursos</a>
+                <a class="nav-link active">Novidades</a>
+                <a class="nav-link">Enviar Conteúdo</a>
+                <a class="nav-link">Enviar Tradução</a>
+
                 <!--
                           <a class="nav-link">menu</a>
                           <a class="nav-link">menu</a>
@@ -98,7 +100,7 @@ if (!isset($_SESSION['idusuarios'])) {
             <div class="input-group mt-3 mb-3 pr-0 col-lg-6">
               <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Pesquisar contéudo em libras...">
               <div class="input-group-append">
-                <button class="btn nova-cor text-white" type="button" id="button-addon2">Pesquisa</button>
+                <button class="btn btn-outline-info my-3 my-sm-0" type="button" id="button-addon2">Pesquisar</button>
               </div>
             </div>
           </div>
@@ -173,14 +175,19 @@ if (!isset($_SESSION['idusuarios'])) {
               </div>
             </div>
           </div>
-      </section>
+
+          
+          <!-- 
+          <br>
+          <div class="spinner-border text-info m-5" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+           -->
+  
       <!-- Fim da seção de produtos -->
     </div>
   </div>
-  <!-- Loading -->
-  <div class="spinner-border text-info" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
+  
 
   <!-- Plugin Vlibras -->
   <div vw class="enabled">

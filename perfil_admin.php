@@ -61,16 +61,14 @@ if (!isset($_SESSION['idusuarios'])) {
                     <span> Meu Perfil - Adm</span> </a>
               </li>
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="home.php"> Cursos <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home.php"> Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item mx-auto">
-                  <a class="nav-link" href="#"> Certificados </a>
-              </li>
+             
               <li class="nav-item mx-auto">
                   <a class="nav-link" href="#"> Parceiros </a>
               </li>
               <li class="nav-item mx-auto">
-              <a class="nav-link" href="sair.php"> Sair </a>
+              <a class="nav-link" href="./backend/sair.php"> Sair </a>
               </li>
             </ul>
           </div> 
@@ -84,11 +82,10 @@ if (!isset($_SESSION['idusuarios'])) {
               <div class="col-xl-12 text-center mt-2">
                 <div class="properties__button text-center">
                         <nav class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                          <a class="nav-link active">todos</a>
-                          <a class="nav-link">meus cursos</a>
-                          <a class="nav-link">menu</a>
-                          <a class="nav-link">menu</a>
-                          <a class="nav-link">menu</a>
+                          <a class="nav-link active">Usuários Ativos</a>
+                          <a class="nav-link">Configurações</a>
+                          <a class="nav-link">Tradução para Libras</a>
+                          <a class="nav-link">Conteúdo</a>                         
                         </nav>
                   </div>         
                 </div>

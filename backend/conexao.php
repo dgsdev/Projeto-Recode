@@ -1,13 +1,11 @@
 <?php
 
-
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "@recodepro";
 $database = "jump";
 
 $link = mysqli_connect($servername, $username, $password, $database);
-
 
 if(!$link){
     die("A conexão mySQL falhou!".mysqli_connect_error());
@@ -18,6 +16,6 @@ epiz_26883339
 @DGSjuh12
 epiz_26883339_jump
 */
-?>
+
 
 

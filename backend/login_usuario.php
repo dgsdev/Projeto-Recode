@@ -40,19 +40,19 @@ if (strlen($email) > 3 && strlen($senha) > 3) {
     echo $usuarios["email"];
     echo $usuarios["idusuarios"]; */
 
-    header('location: home.php');
+    header('location: ../home.php');
 
 }if ($resultado_consulta == true){
 
     echo "<script>
-     location.href = 'home.php'
+     location.href = '../home.php'
     </script>"; 
 
 }else {
 
     echo "<script>
     alert('E-mail ou Senha Inválidos!')
-    location.href = 'index.php'
+    location.href = '../index.php'
     </script>";
 }
 

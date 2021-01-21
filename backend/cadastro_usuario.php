@@ -28,14 +28,14 @@ if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $c
      
     echo "<script>
     alert('Cadastro efetuado!')
-    window.location.href = 'index.php'
+    window.location.href = '../index.php'
     </script>";
 }
 else if ($senha != $conf_senha){
 
     echo "<script>
     alert('As senhas devem ser iguais, tente novamente!')
-    window.location.href = 'cadastro.php'
+    window.location.href = '../cadastro.php'
     </script>";
    
 }
@@ -43,7 +43,7 @@ else if (strlen($nome) <= 3){
 
     echo "<script>
     alert('Digite um nome válido para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
+    window.location.href = '../cadastro.php'
     </script>";
   
 }
@@ -51,7 +51,7 @@ else if (strlen($apelido) <= 3){
 
     echo "<script>
     alert('Digite um Apelido para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
+    window.location.href = '../cadastro.php'
     </script>";
 
 }
@@ -59,7 +59,7 @@ else if (strlen($imagem) <= 3){
 
     echo "<script>
     alert('Coloque uma imagem para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
+    window.location.href = '../cadastro.php'
     </script>";
   
 }
@@ -67,7 +67,7 @@ else if (strlen($email) <= 3 ){
 
     echo "<script>
     alert('Digite um e-mail válido para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
+    window.location.href = '../cadastro.php'
     </script>";
     
 }
@@ -75,7 +75,7 @@ else if (strlen($senha) <= 3){
 
     echo "<script>
     alert('Digite uma senha válida para realizar o cadastro!')
-    window.location.href = 'cadastro.php'
+    window.location.href = '../cadastro.php'
     </script>";
     
 }

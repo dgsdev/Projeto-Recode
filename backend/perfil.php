@@ -6,7 +6,7 @@ session_start();
 
 //Se não existir um valor do índice 'nome', então encerre a aplicação
 if (!isset($_SESSION['nome']) && !isset($_SESSION['idusuarios'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit;
 }
 
@@ -59,19 +59,19 @@ if($senha == $conf_senha) {
         
         echo "<script>
         alert('Atualizado com Sucesso!')
-        window.location.href = 'index.php'
+        window.location.href = '../index.php'
         </script>";
     } else {
         echo "<script>
         alert('Não foi possível fazer atualização!')
-        window.location.href = 'perfil.php'
+        window.location.href = './perfil.php'
         </script>";
     }
 } else {
     
     echo "<script>
     alert('Sua senhas não coincidem!')
-    window.location.href = 'perfil.php'
+    window.location.href = './perfil.php'
     </script>";
 }
     

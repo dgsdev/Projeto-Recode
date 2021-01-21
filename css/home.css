@@ -51,4 +51,22 @@ img.avatar {
     border-radius: 4px 4px 4px 4px;
   }
 }
+.card-body { 
+  border-radius: 10px;
+}
+.card .card-header img {
+   width: 48px;
+   height: 48px;
+}
+.card .card-header h5 {
+   display: inline-block;
+   
+}
+#bgtitle {
+  background-color: #4d9fab;
+}
+
+
+
+
 

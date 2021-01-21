@@ -5,7 +5,7 @@ require_once('conexao.php');
 session_start();
 
 if (!isset($_SESSION['nome'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit;
 }else {
   
@@ -34,4 +34,3 @@ if (!isset($_SESSION['nome'])) {
 
 
 
-?>

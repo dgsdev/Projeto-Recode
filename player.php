@@ -75,7 +75,7 @@ if (!isset($_SESSION['idusuarios'])) {
                   <a class="nav-link" href="#"> Parceiros </a>
               </li>
               <li class="nav-item mx-auto">
-              <a class="nav-link" href="sair.php"> Sair </a>
+              <a class="nav-link" href="./backend/sair.php"> Sair </a>
               </li>
             </ul>
           </div> 
