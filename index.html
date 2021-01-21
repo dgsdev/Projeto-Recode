@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jump | Squad 8</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -20,12 +20,12 @@
         <div class="dropdown">
             <button class="btn my-2 my-sm-0 text-white dropdown-toggle border-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</button>
             <div class="dropdown-menu pt-4" aria-labelledby="dropdownMenuLink">
-                <form action="login_usuario.php" method="post">
+                <form action="./backend/login_usuario.php" method="post">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-sm" id="Email" aria-describedby="emailHelp" placeholder="Seu email">
+                      <input type="email" class="form-control form-control-sm" id="Email" name="email" aria-describedby="emailHelp" placeholder="Seu email">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-sm" id="senha" placeholder="Senha">
+                      <input type="password" class="form-control form-control-sm" id="senha" name="senha"placeholder="Senha">
                     </div>
                     <div class="nav-cadastro px-3">
                         <button type="submit" class="btn btn-sm text-white font-weight-bold">Enviar</button>
