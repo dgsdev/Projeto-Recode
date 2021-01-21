@@ -8,7 +8,8 @@ body{
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #09565f;    border-radius: 25px;
+    background-color: #09565f;
+    border-radius: 25px;
 }
 
 .navbar{
@@ -52,13 +53,25 @@ button{
 
 .dropdown .dropdown-menu .nav-cadastro{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
 }
 
 .dropdown .dropdown-menu .nav-cadastro button{
-    margin-left: -20px !important;
+    /* margin-left: -20px !important; */
     margin-bottom: 1rem !important;
-    font-weight: bold;
+}
+
+.modal{
+    background-color: rgba(1, 28, 31, 0.575);
+}
+
+.modal .modal-dialog .modal-content .modal-footer button{
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+}
+
+.modal .modal-dialog .modal-content{
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
 }
 
 main{
@@ -71,20 +84,39 @@ h1{
     color: #106770;
 }
 
+.sessao1 .carousel{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
 .sessao1{
-    height: 550px;
+    width: 100%;
+    height: inherit;
+    overflow: visible;
 }
 
 .sessao1-box-texto{
+    color: white;
     width: 550px;
     height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sessao1-box-texto h1{
+    color: white;
 }
 
 .sessao1-box-texto p{
-    color: #106770;
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 1.6rem;
+}
+
+.sessao1-box-texto{
+    position: absolute;
 }
 
 .sessao2{
@@ -104,7 +136,8 @@ h1{
 }
 
 .sessao2-box-texto p{
-    font-size: 1.1rem !important;
+    max-width: 450px;
+    font-size: 1rem !important;
 }
 
 .sessao3{
@@ -118,32 +151,27 @@ h1{
     height: 70%;
 }
 
-.sessao3-box-texto .row .col-sm-5 .annie-img{
-    width: 60%;
-    height: auto;
-    border-radius: 4px;
-    margin-top: 5px;
+.sessao3-box-texto .row .media img {
+    width: 70px;
+    border-radius: 50px;
 }
 
-figure figcaption{
-    padding-top: 6px;
-    font-size: 10px;
-    font-style: italic;
+.sessao3-box-texto .row .media-body{
+    font-size: 0.8rem !important;
 }
 
-.sessao3-box-texto .row .col-sm-7 span{
-    font-size: 0.96rem !important;
+.sessao3-box-texto .row p{
+    margin-left: 1.1rem;
 }
 
-.sessao3-box-texto .row .col-sm-7 .fonte{
-    font-size: 14px;
-    font-style: italic;
-    margin-left: 5px;
-    text-decoration: none;
-}
-
-.sessao3-box-texto .row .col-sm-7 p{
-    margin-bottom: 15px;
+#btnSaibaMais{
+    width:125px;
+    color:#278691;
+    border: none;
+    border-radius:3px ;
+    font-style:italic;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .sessao4{
