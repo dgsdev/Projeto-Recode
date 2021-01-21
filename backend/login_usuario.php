@@ -52,7 +52,7 @@ if (strlen($email) > 3 && strlen($senha) > 3) {
 
     echo "<script>
     alert('E-mail ou Senha Inválidos!')
-    location.href = '../index.php'
+    location.href = '../index.html'
     </script>";
 }
 

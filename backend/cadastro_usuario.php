@@ -3,7 +3,6 @@
 require_once('conexao.php');
 
 $nome = $_POST['nome'];
-$apelido = $_POST['apelido'];
 $imagem = $_POST['imagem'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -22,13 +21,13 @@ if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $c
 
     $senha_cripto = md5($senha);     
     
-    $sql = "INSERT INTO usuarios (`nome`, `apelido`, `imagem`, `email`, `senha`) VALUES ('$nome', '$apelido', '$imagem', '$email','$senha_cripto')";
+    $sql = "INSERT INTO usuarios (`nome`,`imagem`, `email`, `senha`) VALUES ('$nome','$imagem', '$email','$senha_cripto')";
     
     $link->query($sql);
      
     echo "<script>
     alert('Cadastro efetuado!')
-    window.location.href = '../index.php'
+    window.location.href = '../index.html'
     </script>";
 }
 else if ($senha != $conf_senha){

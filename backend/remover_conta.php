@@ -16,18 +16,18 @@ if ($id == $_SESSION['idusuarios']) {
 
         echo "<script>
         alert('Conta Excluí­da com Sucesso!')
-        window.location.href = '../index.php'
+        window.location.href = '../index.html'
         </script>";
     } else {
         echo "<script>
         alert('Não foi Possível Excluir sua Conta!')
-        window.location.href = '../index.php'
+        window.location.href = '../index.html'
         </script>";
     }
 } else {
     echo "<script>
     alert('Conta Excluída com Sucesso!')
-    window.location.href = '../index.php'
+    window.location.href = '../index.html'
     </script>";
 }
 

@@ -11,7 +11,7 @@ if (!isset($_SESSION['idusuarios'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,6 +40,12 @@ if (!isset($_SESSION['idusuarios'])) {
     ></script>
     <link rel="stylesheet" href="./css/stylo.css">
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+     body {
+       font-family: Confortaa, cursiva;       
+     } 
+  </style>
 </head>
 
   <body style="background-color: #4d9fab !important;">
@@ -59,7 +65,7 @@ if (!isset($_SESSION['idusuarios'])) {
                     alt="Jump">
               <li class="nav-item mx-auto">
                   <a class="nav-link" href="perfil_usuario.php">
-                    <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
+                    <img class="border avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
                     alt="<?php echo $_SESSION['nome']; ?>">
                     
                     <span> Meu Perfil </span> </a>
@@ -72,7 +78,7 @@ if (!isset($_SESSION['idusuarios'])) {
               </li>-->
              
               <li class="nav-item mx-auto">
-                  <a class="nav-link" href="#"> Parceiros </a>
+                  <a class="nav-link" href="#"> Colaboradores </a>
               </li>
               <li class="nav-item mx-auto">
               <a class="nav-link" href="./backend/sair.php"> Sair </a>
@@ -89,14 +95,10 @@ if (!isset($_SESSION['idusuarios'])) {
               <div class="col-xl-12 text-center mt-2">
                 <div class="properties__button text-center">
                         <nav class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                          <a class="nav-link active">Todos</a>
-                          <a class="nav-link">Meus vídeos</a>
-                          <!--
-                          <a class="nav-link">Projetos</a>
-                          <a class="nav-link">Seja Voluntário</a>
-                          <a class="nav-link">Apoie</a>
-                          <a class="nav-link">Contato</a>
-                          -->
+                          <a class="nav-link active">Novidades</a>
+                          <a class="nav-link">Categorias</a>                          
+                          <a class="nav-link">Tradução Libras</a>
+                          <a class="nav-link">Educacionais</a>           
                         </nav>
                   </div>         
                 </div>

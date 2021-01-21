@@ -24,7 +24,12 @@ if (!isset($_SESSION['idusuarios'])) {
   <title>Jump | Squad 8</title>
   <link rel="stylesheet" type="text/css" href="./css/home.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+     body {
+       font-family: Confortaa, cursiva;       
+     } 
+  </style>
 </head>
 
 <body style="background-color: #4d9fab !important;">
@@ -45,7 +50,7 @@ if (!isset($_SESSION['idusuarios'])) {
                 <a class="nav-link" href="perfil_usuario.php">
 
                   <br>
-                  <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>" alt="<?php echo $_SESSION['nome']; ?>">
+                  <img class="border avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>" alt="<?php echo $_SESSION['nome']; ?>">
                   <br>
                   <span> Meu Perfil </span> </a>
               </li>

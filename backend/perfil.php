@@ -59,7 +59,7 @@ if($senha == $conf_senha) {
         
         echo "<script>
         alert('Atualizado com Sucesso!')
-        window.location.href = '../index.php'
+        window.location.href = '../index.html'
         </script>";
     } else {
         echo "<script>

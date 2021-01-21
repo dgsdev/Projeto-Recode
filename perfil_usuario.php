@@ -35,9 +35,15 @@ if (!isset($_SESSION['nome'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jump | Squad 8</title>
-    <link rel="stylesheet" type="text/css" href="css/perfil.css" />
+    <link rel="stylesheet" type="text/css" href="./css/perfil.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&display=swap" rel="stylesheet">
     <script src="./js/funcoes.js"></script>
+    <style>
+     body {
+       font-family: Confortaa, cursiva;       
+     } 
+  </style>
   </head>
 
   <body>
@@ -54,11 +60,11 @@ if (!isset($_SESSION['nome'])) {
           <ul class="navbar-nav mr-auto d-flex flex-column">
           
             </li>
-              <img class=" mb-2 mx-auto" width: 150px; src="./img/marca.svg"
+              <img class="mb-2 mx-auto" width: 150px; src="./img/marca.svg"
                     alt="Jump">
             <li class="nav-item mx-auto active">
                 <a class="nav-link" href="perfil_usuario.php">
-                  <img class="avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
+                  <img class="border rounded-circle avatar mb-2 mx-auto" src="<?php echo $_SESSION['imagem']; ?>"
                   alt="<?php echo $_SESSION['nome']; ?>">
                   <span> Meu Perfil </span> </a>
             </li>
@@ -87,31 +93,28 @@ if (!isset($_SESSION['nome'])) {
             <form class="d-flex align-items-center mt-5" action="./backend/perfil.php" method="post">
 
                 <div class="col-lg-3 d-flex justify-content-center">
-                  <img src="<?php echo $_SESSION['imagem'] ?>" class="avatar-perfil" alt="<?php echo $_SESSION['nome']; ?>">
+                  <img src="<?php echo $_SESSION['imagem'] ?>" class="border rounded-circle avatar-perfil" alt="<?php echo $_SESSION['nome']; ?>">
                 </div>
                 
                 <div class="col-lg-9">
                   <div class="row mb-3">
-                    <div class="col-lg-3">
-                      <input type="text" class="form-control form-grupo1" id="apelido" value="<?php echo $_SESSION['apelido']; ?>" name="apelido">
-                      <small for="apelido">Apelido:</small>
-                    </div>
-                    <div class="col-lg-3">
-                      <input type="url" class="form-control form-grupo1" id="imagem" value="<?php echo $_SESSION['imagem']; ?>" name="imagem">
+                   
+                    <div class="col-lg-5">
+                      <input type="url" class="border border-info rounded form-control form-grupo1" id="imagem" value="<?php echo $_SESSION['imagem']; ?>" name="imagem">
                       <small for="imagem">Imagem:</small>
                     </div>
                     <div class="col-lg-6">
-                      <input type="text" class="form-control form-grupo1" id="nome" value="<?php echo $_SESSION['nome']; ?>" name="nome">
+                      <input type="text" class="border border-info rounded form-control form-grupo1" id="nome" value="<?php echo $_SESSION['nome']; ?>" name="nome">
                       <small for="nome">Nome:</small>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3">
-                      <input type="date" class="form-control form-grupo1" id="nascimento" value="<?php echo $_SESSION['nascimento']; ?>" name="nascimento">
+                    <div class="col-lg-5">
+                      <input type="date" class="border border-info rounded form-control form-grupo1" id="nascimento" value="<?php echo $_SESSION['nascimento']; ?>" name="nascimento">
                       <small for="nascimento">Data de Nascimento:</small>
                     </div>
                     <div class="col-lg-6">
-                      <select class="form-control form-grupo1" id="sexo" name="sexo">
+                      <select class="border border-info rounded form-control form-grupo1" id="sexo" name="sexo">
                         <option><?php echo $_SESSION['sexo']; ?></option>
                         <option>Feminino</option>
                         <option>Masculino</option>
@@ -125,47 +128,47 @@ if (!isset($_SESSION['nome'])) {
 
          <!-- Seção 2 -->
          <div class="container-form">
-           
+           <br>
                 <div class="col-lg-12">
 
                   <div class="row mb-3">
                     <div class="col-lg-4 col-md-6">
-                      <input type="text" class="form-control form-grupo1" id="endereco" value="<?php echo $_SESSION['endereco']; ?>" name="endereco">
+                      <input type="text" class="border border-info rounded form-control form-grupo1" id="endereco" value="<?php echo $_SESSION['endereco']; ?>" name="endereco">
                       <small for="rua">Rua:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
-                      <input type="text" class="form-control form-grupo1" id="bairro" value="<?php echo $_SESSION['bairro']; ?>" name="bairro">
+                      <input type="text" class="border border-info rounded form-control form-grupo1" id="bairro" value="<?php echo $_SESSION['bairro']; ?>" name="bairro">
                       <small for="bairro">Bairro:</small>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
-                      <input type="text" class="form-control form-grupo1" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" name="cidade">
+                    <div class="col-lg-4 col-md-6">
+                      <input type="text" class="border border-info rounded form-control form-grupo1" id="cidade" value="<?php echo $_SESSION['cidade']; ?>" name="cidade">
                       <small for="cidade">Cidade:</small>
                     </div>
 
-                    <div class="col-lg-2 col-md-2">
-                    <input type="text" class="form-control form-grupo1" id="estado" value="<?php echo $_SESSION['estado']; ?>" name="estado">
+                    <div class="col-lg-4 col-md-2">
+                    <input type="text" class="border border-info rounded form-control form-grupo1" id="estado" value="<?php echo $_SESSION['estado']; ?>" name="estado">
                     <small for="estado">Estado:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-4">
-                    <input type="text" class="form-control form-grupo1" id="cep" value="<?php echo $_SESSION['cep']; ?>" name="cep">
+                    <input type="text" class="border border-info rounded form-control form-grupo1" id="cep" value="<?php echo $_SESSION['cep']; ?>" name="cep">
                     <small for="cep">CEP:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-4">
-                    <input type="text" class="form-control form-grupo1" id="pais" value="<?php echo $_SESSION['pais']; ?>" name="pais">
+                    <input type="text" class="border border-info rounded form-control form-grupo1" id="pais" value="<?php echo $_SESSION['pais']; ?>" name="pais">
                     <small for="pais">País:</small>
                     </div>
                   </div>
-                </div> 
-    
+                </div>     
          </div>
 
          <!-- Seção 3 -->
+         
           <div class="container-form mt-2">
-            <p> Em que situação se enquadra? </p>
+            
 
             <?php
             $value=$_SESSION['situacao'];                   
@@ -187,8 +190,8 @@ if (!isset($_SESSION['nome'])) {
             ?>
           
                 <div class="col-lg-9">
+                  <p>Em que situação se enquadra? </p>
                   <div class="row mb-3">
-
                     <div class="col-lg-3 col-md-3">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="situacao" id="ouvinte" value="Ouvinte" <?php echo $result1; ?>>
@@ -252,22 +255,22 @@ if (!isset($_SESSION['nome'])) {
 
          <!-- Seção 4 -->
           <div class="container-form" style="border-bottom: none !important;">
-        
+        <br>
                 <div class="col-lg-12">
 
                   <div class="row mb-3">
                     <div class="col-lg-4 col-md-6">
-                      <input type="email" class="form-control form-grupo1" id="email" value="<?php echo $_SESSION['email']; ?>" name="email">
+                      <input type="email" class="border border-info rounded form-control form-grupo1" id="email" value="<?php echo $_SESSION['email']; ?>" name="email">
                       <small for="email">Email:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
-                      <input type="password" class="form-control form-grupo1" id="senha" name="senha">
+                      <input type="password" class="border border-info rounded form-control form-grupo1" id="senha" name="senha">
                       <small for="senha">Senha:</small>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
-                      <input type="password" class="form-control form-grupo1" id="conf-senha" name="conf_senha">
+                      <input type="password" class="border border-info rounded form-control form-grupo1" id="conf-senha" name="conf_senha">
                       <small for="conf-senha">Confirmar senha:</small>
                     </div>
 
@@ -281,7 +284,7 @@ if (!isset($_SESSION['nome'])) {
 
                    
                     <section class="mt-5 p-5">
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-danger form-control-sm" role="alert">
                     Cuidado! Ao Remover sua Conta, não Poderá ser Recuperada!
                     </div>
                     <button type="button" class="btn btn-danger" onclick="confirmar()">Remover Conta</button>
