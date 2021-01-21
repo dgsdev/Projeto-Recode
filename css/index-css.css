@@ -163,6 +163,10 @@ h1{
     margin-left: 1.1rem;
 }
 
+#mais{
+    display: none;
+}
+
 #btnSaibaMais{
     width:125px;
     color:#278691;
@@ -189,6 +193,14 @@ h1{
     color: white;
 }
 
+.sessao4-box-texto .row span{
+    font-size: 0.8rem;
+}
+
+.sessao4-box-texto .row p{
+    max-width: 450px;
+}
+
 .sessao5{
     width: 100%;
     height: inherit;
@@ -199,19 +211,49 @@ h1{
     width: 90%;
 }
 
-.sessao5-box-texto h1{
+.sessao5-box-texto .capsula-parc .cap .foto-parc{
+    width: 150px;
+    border-radius: 75px;
+}
+
+.figure-img{
+    width: 150px !important;
+    border-radius: 75px !important;
+}
+
+.figure-caption a{
+    color:#278691;
+    text-decoration: none;
+}
+
+.sessao6{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    color: white;
+}
+
+.sessao6-box-texto{
+    width: 80%;
+    height: 70%;
+}
+
+.sessao6-box-texto h1{
     font-size: 1.8rem;
+    color: white;
 }
 
 .imgcarrocel{
-    width: 90px;
-    border-radius: 45px;
+    width: 80px;
+    border-radius: 40px;
+    border: solid rgba(255, 255, 255, 0.527) 5px;
 }
 
 .descricao{
     font-weight: bold;
     font-size: 1.1rem;
-    margin-left: 10px;
+    margin-left: -10px;
     width: 400px;
 }
 
