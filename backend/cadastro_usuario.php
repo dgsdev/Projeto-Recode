@@ -8,7 +8,6 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $conf_senha = $_POST['conf_senha'];
 
-
 /*echo '<br> Nome: '.$nome;
 echo '<br> Apelido: '.$apelido;
 echo '<br> Imagem: '.$imagem;
@@ -16,10 +15,9 @@ echo '<br> Email: '.$email;
 echo '<br> Senha: '.$senha;
 echo '<br> Confirmação: '.$conf_senha;*/
 
+if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha === $conf_senha) {
 
-if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $conf_senha) {
-
-    $senha_cripto = md5($senha);     
+    $senha_cripto = md5($senha);
     
     $sql = "INSERT INTO usuarios (`nome`,`imagem`, `email`, `senha`) VALUES ('$nome','$imagem', '$email','$senha_cripto')";
     
@@ -54,14 +52,14 @@ else if (strlen($nome) <= 3){
 //     </script>";
 
 // }
-else if (strlen($imagem) <= 3){
+// else if (strlen($imagem) <= 3){
 
-    echo "<script>
-    alert('Coloque uma imagem para realizar o cadastro!')
-    window.location.href = '../index.html'
-    </script>";
+//     echo "<script>
+//     alert('Coloque uma imagem para realizar o cadastro!')
+//     window.location.href = '../index.html'
+//     </script>";
   
-}
+// }
 else if (strlen($email) <= 3 ){
 
     echo "<script>

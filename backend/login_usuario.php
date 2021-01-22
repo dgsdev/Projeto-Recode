@@ -32,8 +32,7 @@ if (strlen($email) > 3 && strlen($senha) > 3) {
     $_SESSION['pais'] = $usuarios["pais"];
     $_SESSION['cep'] = $usuarios["cep"];
     $_SESSION['situacao'] = $usuarios["situacao"];
-    $_SESSION['grau'] = $usuarios["grau"];
-    
+    $_SESSION['grau'] = $usuarios["grau"];    
 
  /*   echo $usuarios["nome"];
     echo $usuarios["imagem"];
