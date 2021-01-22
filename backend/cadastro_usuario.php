@@ -8,12 +8,12 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $conf_senha = $_POST['conf_senha'];
 
-/*echo '<br> Nome: '.$nome;
-echo '<br> Apelido: '.$apelido;
-echo '<br> Imagem: '.$imagem;
-echo '<br> Email: '.$email;
-echo '<br> Senha: '.$senha;
-echo '<br> Confirmação: '.$conf_senha;*/
+// echo '<br> Nome: '.$nome;
+// echo '<br> Apelido: '.$apelido;
+// echo '<br> Imagem: '.$imagem;
+// echo '<br> Email: '.$email;
+// echo '<br> Senha: '.$senha;
+// echo '<br> Confirmação: '.$conf_senha;
 
 if(strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha === $conf_senha) {
     $senha_cripto = md5($senha);
