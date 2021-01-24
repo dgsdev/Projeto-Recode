@@ -27,8 +27,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Jump é uma plataforma onde as pessoas podem, colaborativamente, subir traduções em LIBRAS para vídeos sem acessibilidade de maneira prática e fácil. &#10084;&#65039;
-
+Jump é uma plataforma onde as pessoas podem, colaborativamente, subir traduções em LIBRAS para vídeos sem acessibilidade de maneira prática e fácil. 
 ---
 
 ## by Squad8 | Jump - Recode Pro 2021
