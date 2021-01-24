@@ -4,7 +4,7 @@ session_start();
 
 //Se não existir um valor do índice 'nome', então encerre a aplicação
 if (!isset($_SESSION['idusuarios'])) {
-  header('Location: index.php');
+  header('Location: index.html');
   exit;
 } else {
 
@@ -13,10 +13,10 @@ if (!isset($_SESSION['idusuarios'])) {
   $postagens = $link->query("SELECT * FROM postagens JOIN usuarios WHERE fk_usuario = idusuarios ORDER BY id_postagens DESC");
  
 }
-
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
