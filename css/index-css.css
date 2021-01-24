@@ -1,0 +1,265 @@
+body{
+    font-family: 'Comfortaa', cursive;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-image: linear-gradient(to bottom, #177681, #39aebb, #2a8994, #33929d, #3b9ca7);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #09565f;
+    border-radius: 25px;
+}
+
+.navbar{
+    padding: 15px 0;
+    /* background-color: #1d8490; */
+    background-image: linear-gradient(to bottom, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+}
+
+.img-logo{
+    width: 145px;
+}
+
+button{
+    background-color: transparent;
+}
+
+.dropdown .dropdown-menu{
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    margin-left: -13rem !important;
+    width: 18rem !important;
+}
+
+.dropdown .dropdown-menu .form-group{   
+    padding: 0 1rem;
+}
+
+.dropdown .dropdown-menu a{
+    text-decoration: none !important;
+}
+
+.dropdown .dropdown-menu .nav-cadastro a small{
+    margin-left: 1rem !important;
+
+}
+
+.form-text{
+    color: white !important;
+    display: inline;
+    vertical-align: -1vh;
+}
+
+.dropdown .dropdown-menu .nav-cadastro{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dropdown .dropdown-menu .nav-cadastro button{
+    /* margin-left: -20px !important; */
+    margin-bottom: 1rem !important;
+}
+
+.modal{
+    background-color: rgba(1, 28, 31, 0.575);
+}
+
+.modal .modal-dialog .modal-content .modal-footer button{
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+}
+
+.modal .modal-dialog .modal-content{
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+}
+
+main{
+    width: 100%;
+}
+
+h1{
+    font-family: arial;
+    font-size: 2.4rem;
+    color: #106770;
+}
+
+.sessao1 .carousel{
+    width: 100%;
+    height: 100%;
+}
+
+.sessao1{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+}
+
+.sessao1-box-texto{
+    color: white;
+    width: 550px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sessao1-box-texto h1{
+    color: white;
+}
+
+.sessao1-box-texto p{
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+
+.sessao1-box-texto{
+    position: absolute;
+}
+
+.sessao2{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    color: white;
+}
+
+.sessao2-box-texto{
+    width: 80%;
+}
+
+.sessao2-box-texto h1{
+    color: white;
+}
+
+.sessao2-box-texto p{
+    max-width: 450px;
+    font-size: 1rem !important;
+}
+
+.sessao3{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+}
+
+.sessao3-box-texto{
+    width: 80%;
+    height: 70%;
+}
+
+.sessao3-box-texto .row .media img {
+    width: 70px;
+    border-radius: 50px;
+}
+
+.sessao3-box-texto .row .media-body{
+    font-size: 0.8rem !important;
+}
+
+.sessao3-box-texto .row p{
+    margin-left: 1.1rem;
+}
+
+#mais{
+    display: none;
+}
+
+#btnSaibaMais{
+    width:125px;
+    color:#278691;
+    border: none;
+    border-radius:3px ;
+    font-style:italic;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sessao4{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    color: white;
+}
+
+.sessao4-box-texto{
+    width: 80%;
+}
+
+.sessao4-box-texto h1{
+    color: white;
+}
+
+.sessao4-box-texto .row span{
+    font-size: 0.8rem;
+}
+
+.sessao4-box-texto .row p{
+    max-width: 450px;
+}
+
+.sessao5{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+}
+
+.sessao5-box-texto{
+    width: 90%;
+}
+
+.sessao5-box-texto .capsula-parc .cap .foto-parc{
+    width: 150px;
+    border-radius: 75px;
+}
+
+.figure-img{
+    width: 150px !important;
+    border-radius: 75px !important;
+}
+
+.figure-caption a{
+    color:#278691;
+    text-decoration: none;
+}
+
+.sessao6{
+    width: 100%;
+    height: inherit;
+    overflow: visible;
+    background-image: linear-gradient(to left top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    color: white;
+}
+
+.sessao6-box-texto{
+    width: 80%;
+    height: 70%;
+}
+
+.sessao6-box-texto h1{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.imgcarrocel{
+    width: 80px;
+    border-radius: 40px;
+    border: solid rgba(255, 255, 255, 0.527) 5px;
+}
+
+.descricao{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: -10px;
+    width: 400px;
+}
+
+.footer{
+    background-image: linear-gradient(to top, #177681, #217f8a, #2a8994, #33929d, #3b9ca7);
+    color: white;
+    font-size: 0.8rem;
+    font-style: italic;
+}

@@ -1,0 +1,72 @@
+body {
+  background-color: #4d9fab !important;
+}
+
+.painel-form {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.form-inline .form-group input {
+  border-radius: 4px 0px 0px 4px;
+}
+
+button.btn {
+  border-radius: 0px 4px 4px 0px;
+}
+
+a.nova-cor,
+button.nova-cor {
+  background-color: #238b98;
+  border-color: #8ac0ca;
+}
+
+.navbar {
+  flex-direction: column;
+  padding-top: 30px;
+  background-color: #238b98;
+}
+
+li.nav-item.mx-auto a.nav-link,
+.active > .nav-link {
+  color: white;
+}
+
+.collapse .navbar-collapse {
+  flex-direction: column;
+}
+
+img.avatar {
+  border-radius: 75px;
+  width: 60px;
+  display: block;
+}
+
+@media screen and(max-width: 348px) {
+  .form-inline .form-group input {
+    border-radius: 4px 4px 4px 4px;
+  }
+
+  button.btn {
+    border-radius: 4px 4px 4px 4px;
+  }
+}
+.card-body { 
+  border-radius: 10px;
+}
+.card .card-header img {
+   width: 48px;
+   height: 48px;
+}
+.card .card-header h5 {
+   display: inline-block;
+   
+}
+#bgtitle {
+  background-color: #4d9fab;
+}
+
+
+
+
+
