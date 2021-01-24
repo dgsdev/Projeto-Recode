@@ -12,7 +12,6 @@ if (!isset($_SESSION['nome']) && !isset($_SESSION['idusuarios'])) {
 
 $idusuario = $_SESSION['idusuarios'];
 $nome = $_POST['nome'];
-$apelido = $_POST['apelido'];
 $imagem = $_POST['imagem'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -51,7 +50,7 @@ if($senha == $conf_senha) {
     /*  $sql = "UPDATE INTO `usuarios` (`idusuarios`, `nome`, `apelido`, `imagem`, `email`, `senha`, `conf_senha`, `situacao`, `grau`, `sexo`, `nascimento`, `endereco`, `bairro`, `cidade`, `estado`, `cep`, `pais`) 
     VALUES (NULL, '$nome', '$apelido', '$imagem', '$email', '$senha_cripto', '', '$situacao', '$grau', '$sexo', '$nascimento', '$endereco', '$bairro', '$cidade', '$estado', '$cep', '$pais')"; */
     
-    $update = "UPDATE `usuarios` SET `nome`= '$nome',`apelido`= '$apelido', `imagem`='$imagem', `email`='$email', `senha`='$senha_cripto', `situacao`='$situacao', `grau`='$grau', `sexo`='$sexo', `nascimento`='$nascimento', `endereco`='$endereco', `bairro`='$bairro', `cidade`='$cidade', `estado`='$estado', `cep`='$cep', `pais`='$pais' WHERE `idusuarios` = '$idusuario'";
+    $update = "UPDATE `usuarios` SET `nome`= '$nome', `imagem`='$imagem', `email`='$email', `senha`='$senha_cripto', `situacao`='$situacao', `grau`='$grau', `sexo`='$sexo', `nascimento`='$nascimento', `endereco`='$endereco', `bairro`='$bairro', `cidade`='$cidade', `estado`='$estado', `cep`='$cep', `pais`='$pais' WHERE `idusuarios` = '$idusuario'";
     
     $link->query($update); 
     
