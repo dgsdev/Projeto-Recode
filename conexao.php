@@ -1,6 +1,6 @@
 <?php
 
-$servername = "67.205.138.239";
+$servername = "67.205.138.239:3306";
 $username = "dgsdev";
 $password = "@dgsjuh12";
 $database = "jump";
@@ -15,10 +15,7 @@ sql102.epizy.com
 epiz_26883339
 @DGSjuh12
 epiz_26883339_jump
-
-$servername = "localhost";
-$username = "root";
-$password = "@recodepro";
-$database = "jump";
-
 */
+
+
+
