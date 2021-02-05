@@ -14,7 +14,7 @@ E você que é intérprete de LIBRAS poderá contribuir com seus vídeos interpr
 
 ### Link Aqui da aplicação:
 
-- [JUMP](http://dgsdev.infinityfreeapp.com/index.php)
+- [JUMP](http://jump.sytes.net/)
 
 ## 🚀 Tecnologias
 
